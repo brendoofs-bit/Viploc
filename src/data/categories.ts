@@ -10,7 +10,7 @@ export const categories = [
     id: 'freezers',
     slug: 'freezers',
     name: 'Freezers',
-    description: 'Freezers verticais e horizontais para congelamento rápido e eficiente.',
+    description: 'Locação de freezers verticais e horizontais para congelamento rápido e eficiente.',
     icon: 'Wind',
   },
   {
@@ -31,7 +31,7 @@ export const categories = [
     id: 'cervejeiras',
     slug: 'cervejeiras',
     name: 'Cervejeiras',
-    description: 'Cervejas estupidamente geladas para seus eventos e estabelecimentos.',
+    description: 'Cervejas extremamente geladas para seus eventos e estabelecimentos.',
     icon: 'Beer',
   },
   {

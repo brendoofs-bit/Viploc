@@ -1,146 +1,192 @@
 export const products = [
   {
-    id: 'tv-4k-android',
-    name: 'TV 4K Android',
+    id: 'expositor-gelopar-570l-br',
+    name: 'Expositor de Bebidas Gelopar 570L',
+    categoryId: 'expositores-de-bebidas',
+    slug: 'expositor-gelopar-570l-br',
+    shortDescription: 'Expositor Gelopar 570 litros Branco, ideal para refrigeração de bebidas.',
+    benefits: ['Porta de vidro', 'Alta capacidade', 'Controle de temperatura'],
+    recommendedUses: ['Comércio', 'Restaurantes', 'Eventos'],
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '89,00 KG' }
+  },
+  {
+    id: 'freezer-consul-534l',
+    name: 'Freezer Consul 534L',
+    categoryId: 'freezers',
+    slug: 'freezer-consul-534l-chb53eb',
+    shortDescription: 'Freezer Horizontal Consul 534 litros de alta capacidade e armazenamento.',
+    benefits: ['Amplo espaço interno', 'Alta performance', 'Dupla ação'],
+    recommendedUses: ['Grandes eventos', 'Cozinhas industriais', 'Estoque de alimentos'],
+    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Peso': '68,90 KG' }
+  },
+  {
+    id: 'freezer-consul-309l',
+    name: 'Freezer Consul 309L',
+    categoryId: 'freezers',
+    slug: 'freezer-consul-309l-cha31fb',
+    shortDescription: 'Freezer Horizontal Consul 309 litros, compacto e eficiente.',
+    benefits: ['Eficiência energética', 'Congelamento rápido', 'Tamanho ideal'],
+    recommendedUses: ['Eventos de médio porte', 'Comércio', 'Residencial'],
+    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Peso': '49,50 KG' }
+  },
+  {
+    id: 'freezer-vertical-consul-246l',
+    name: 'Freezer Consul Vertical 246L',
+    categoryId: 'freezers',
+    slug: 'freezer-vertical-consul-246l',
+    shortDescription: 'Freezer Vertical Consul 246 litros com gavetas, ideal para espaços apertados.',
+    benefits: ['Organização em gavetas', 'Otimiza espaço', 'Fácil acesso'],
+    recommendedUses: ['Cozinhas', 'Prédios comerciais', 'Eventos corporativos'],
+    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Peso': '49,90 KG' }
+  },
+  {
+    id: 'cervejeira-gelopar-570l-pr',
+    name: 'Cervejeira Gelopar 570L',
+    categoryId: 'cervejeiras',
+    slug: 'cervejeira-gelopar-570l-pr',
+    shortDescription: 'Cervejeira Gelopar Preta 570 litros, para bares, restaurantes, festas e eventos.',
+    benefits: ['Controlador eletrônico', 'Refrigeração de alta eficiência', 'Design elegante preta'],
+    recommendedUses: ['Bares', 'Festas', 'Eventos esportivos'],
+    specs: { 'Cor': 'Preto', 'Voltagem': '220V', 'Peso': '49,90 KG' }
+  },
+  {
+    id: 'cervejeira-gelopar-full-black-570l',
+    name: 'Cervejeira Gelopar Full Black 570L',
+    categoryId: 'cervejeiras',
+    slug: 'cervejeira-gelopar-full-black-570l',
+    shortDescription: 'Cervejeira Gelopar Full Black de luxo 570 Litros para atender em qualquer situação, ótima armazenagem.',
+    benefits: ['Design Full Black exclusivo', 'Iluminação em LED', 'Cerveja perfeitamente gelada'],
+    recommendedUses: ['Eventos premium', 'Camarotes', 'Bares sofisticados'],
+    specs: { 'Cor': 'Preto', 'Voltagem': '220V', 'Peso': '94,00 KG' }
+  },
+  {
+    id: 'tv-43-4k',
+    name: 'TV 43" 4K',
     categoryId: 'tv',
-    slug: 'tv-4k-android',
-    shortDescription: 'Smart TV 4K com sistema Android, ideal para eventos, feiras e apresentações.',
-    benefits: [
-      'Resolução 4K Ultra HD',
-      'Sistema Smart Android TV',
-      'Conexões HDMI e USB'
-    ],
-    recommendedUses: ['Eventos Corporativos', 'Feiras', 'Uso Doméstico', 'Apresentações'],
-    specs: {
-      'Tamanho': 'Sob consulta',
-      'Resolução': '4K UHD',
-      'Voltagem': 'Bivolt'
-    }
+    slug: 'tv-43-4k',
+    shortDescription: 'Smart TV 43 polegadas com resolução 4K, perfeita para uso particular e temporadas.',
+    benefits: ['Qualidade de imagem 4K', 'Fácil instalação', 'Compacta'],
+    recommendedUses: ['Feiras', 'Apresentações', 'Stands'],
+    specs: { 'Cor': 'Preto', 'Voltagem': 'Bivolt', 'Peso': '7,70 KG' }
+  },
+  {
+    id: 'tv-43-tcl',
+    name: '1401 - TV 43" TCL P755',
+    categoryId: 'tv',
+    slug: 'tv-43-tcl-p755',
+    shortDescription: 'TV Smart TCL 43 polegadas moderna e eficiente, ótima para uso particular, Airbnb, temporadas.',
+    benefits: ['Sistema Smart inteligente', 'Conectividade rápida', 'Bordas finas'],
+    recommendedUses: ['Salas de reunião', 'Palestras', 'Exibição de vídeos'],
+    specs: { 'Cor': 'Preto', 'Voltagem': 'Bivolt', 'Peso': '6,80 KG' }
+  },
+  {
+    id: 'tv-65-tcl',
+    name: 'Smart TV TCL QLED 65" 4K Wi-Fi Android TV',
+    categoryId: 'tv',
+    slug: 'tv-65-tcl-qled',
+    shortDescription: 'Super Smart TV TCL QLED de 65 polegadas 4K, ideal para espaços de festas, bares, restaurantes e eventos.',
+    benefits: ['Painel QLED vibrante', 'Android TV', 'Tamanho imersivo'],
+    recommendedUses: ['Grandes auditórios', 'Stands de destaque', 'Eventos VIP'],
+    specs: { 'Cor': 'Preto', 'Voltagem': 'Bivolt', 'Peso': '20,00 KG' }
+  },
+  {
+    id: 'freezer-vidro-292l',
+    name: 'Freezer Metalfrio 292L Tampa de Vidro ',
+    categoryId: 'freezers',
+    slug: 'freezer-horizontal-vidro-292l-metalfrio',
+    shortDescription: 'Freezer de vitrine Metalfrio 292 Litros com tampa de vidro para facilitar o uso e economizar energia.',
+    benefits: ['Tampa de vidro deslizante', 'Visibilidade para vendas', 'Consumo reduzido'],
+    recommendedUses: ['Sorveterias temporárias', 'Venda de gelo', 'Eventos abertos'],
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Marca': 'Metalfrio' }
   },
   {
     id: 'geladeira-375l-brastemp',
-    name: 'Geladeira 375L Brastemp',
+    name: 'Geladeira Brastemp 375L',
     categoryId: 'geladeiras',
     slug: 'geladeira-375l-brastemp',
-    shortDescription: 'Geladeira Frost Free Brastemp 375 litros, alta capacidade e refrigeração rápida.',
-    benefits: [
-      'Sistema Frost Free',
-      'Alta durabilidade e resfriamento rápido',
-      'Baixo consumo de energia'
-    ],
-    recommendedUses: ['Festas', 'Eventos', 'Uso Doméstico', 'Bares temporários'],
-    specs: {
-      'Capacidade': '375 Litros',
-      'Marca': 'Brastemp / Consul',
-      'Voltagem': 'Sob consulta'
-    }
-  },
-  {
-    id: 'cervejeira-gelopar-410l',
-    name: 'Cervejeira Gelopar 410L',
-    categoryId: 'cervejeiras',
-    slug: 'cervejeira-gelopar-410l',
-    shortDescription: 'Cervejeira vertical Gelopar 410L. Cerveja trincando na temperatura certa.',
-    benefits: [
-      'Controlador eletrônico de temperatura',
-      'Porta de vidro para exposição',
-      'Refrigeração com ar forçado'
-    ],
-    recommendedUses: ['Bares', 'Restaurantes', 'Grandes Eventos', 'Conveniências'],
-    specs: {
-      'Capacidade': '410 Litros',
-      'Marca': 'Gelopar',
-      'Voltagem': 'Sob consulta'
-    }
-  },
-  {
-    id: 'freezer-horizontal-consul-534l',
-    name: 'Freezer Horizontal Consul 534L',
-    categoryId: 'freezers',
-    slug: 'freezer-horizontal-consul-534l',
-    shortDescription: 'Freezer horizontal de alta capacidade, dupla ação (refrigera e congela).',
-    benefits: [
-      'Alta capacidade de armazenamento',
-      'Função dupla: freezer ou refrigerador',
-      'Isolamento térmico reforçado'
-    ],
-    recommendedUses: ['Estoque de alimentos', 'Grandes eventos', 'Cozinhas industriais'],
-    specs: {
-      'Capacidade': '534 Litros',
-      'Marca': 'Consul',
-      'Voltagem': 'Sob consulta'
-    }
-  },
-  {
-    id: 'micro-ondas-electrolux-34l',
-    name: 'Micro-ondas Electrolux 34L',
-    categoryId: 'micro-ondas',
-    slug: 'micro-ondas-electrolux-34l',
-    shortDescription: 'Micro-ondas prático e potente de 34 litros para uso moderado a intenso.',
-    benefits: [
-      'Menu pré-programado',
-      'Alta potência de aquecimento',
-      'Painel digital fácil de usar'
-    ],
-    recommendedUses: ['Refeitórios temporários', 'Eventos', 'Uso Doméstico', 'Camarins'],
-    specs: {
-      'Capacidade': '34 Litros',
-      'Marca': 'Electrolux',
-      'Voltagem': 'Sob consulta'
-    }
-  },
-  {
-    id: 'expositor-vertical',
-    name: 'Expositor de Bebidas 570L',
-    categoryId: 'expositores-de-bebidas',
-    slug: 'expositor-vertical-570l',
-    shortDescription: 'Expositor vertical com porta de vidro, ideal para manter suas bebidas visíveis e geladas.',
-    benefits: [
-      'Porta de vidro anti-embaçante',
-      'Iluminação interna',
-      'Prateleiras ajustáveis'
-    ],
-    recommendedUses: ['Mercados', 'Lanchonetes', 'Festas de Casamento', 'Ativações de Marca'],
-    specs: {
-      'Capacidade': '570 Litros',
-      'Portas': '1 ou 2',
-      'Voltagem': 'Sob consulta'
-    }
+    shortDescription: 'Locação perfeita para qualquer ocasião. Refrigerador potente com um ótimo espaço para armazenamento interno.',
+    benefits: ['Divisão interna otimizada', 'Frost Free', 'Desempenho Brastemp'],
+    recommendedUses: ['Camarins', 'Apoio de cozinhas', 'Staff'],
+    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Marca': 'Brastemp' }
   },
   {
     id: 'frigobar-consul-117l',
     name: 'Frigobar Consul 117L',
     categoryId: 'frigobar',
     slug: 'frigobar-consul-117l',
-    shortDescription: 'Frigobar espaçoso e silencioso, ideal para manter drinks e pequenos lanches gelados.',
-    benefits: [
-      'Compartimento Extra Frio',
-      'Porta-latas',
-      'Funcionamento silencioso'
-    ],
-    recommendedUses: ['Quartos de Hotel', 'Camarins', 'Salas de Reunião', 'Apoio de Bar'],
-    specs: {
-      'Capacidade': '117 Litros',
-      'Marca': 'Consul / Brastemp',
-      'Voltagem': 'Sob consulta'
-    }
+    shortDescription: 'Frigobar prático Consul 117 litros, ótima armazenagem interna, perfeito para quartos de hotel, Airbnb, reuniões e salas comerciais.',
+    benefits: ['Espaço interno amplo', 'Porta latas', 'Gelo rápido'],
+    recommendedUses: ['Quartos', 'Stands de feiras', 'Salas executivas'],
+    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Peso': '60,00 KG' }
   },
   {
-    id: 'purificador-soft',
-    name: 'Purificador de Água Soft',
+    id: 'purificador-consul-bivolt',
+    name: 'Purificador de Água Consul Cinza',
     categoryId: 'purificador-de-agua',
-    slug: 'purificador-soft',
-    shortDescription: 'Água gelada e natural de alta qualidade para servir equipes e convidados.',
-    benefits: [
-      'Água gelada em alta vazão',
-      'Filtragem dupla',
-      'Design compacto e elegante'
-    ],
-    recommendedUses: ['Escritórios', 'Eventos Corporativos', 'Feiras e Stands'],
-    specs: {
-      'Tipo de Instalação': 'Mesa ou Parede',
-      'Temperatura': 'Natural e Gelada',
-      'Voltagem': 'Sob consulta'
-    }
+    slug: 'purificador-consul-bivolt',
+    shortDescription: 'Purificador de água Consul compacto e completo, ideal para festas, clínicas, salas comerciais e uso particular.',
+    benefits: ['Água gelada e natural', 'Classificação máxima em filtragem', 'Bivolt'],
+    recommendedUses: ['Staff de produções', 'Expositores', 'DJs e convidados'],
+    specs: { 'Cor': 'Cinza', 'Voltagem': 'Bivolt', 'Marca': 'Consul' }
+  },
+  {
+    id: 'geladeira-frost-free-brastemp-375l',
+    name: 'Geladeira Frost Free Brastemp 375l',
+    categoryId: 'geladeiras',
+    slug: 'geladeira-frost-free-brastemp-375l',
+    shortDescription: 'Geladeira Frost Free Brastemp, resfriamento excelente e amplo espaço.',
+    benefits: ['Frost Free Automático', 'Espaço Duplex', 'Refrigeração de ponta'],
+    recommendedUses: ['Cozinhas temporárias', 'Eventos esportivos', 'Catering'],
+    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Capacidade': '375 Litros', 'Marca': 'Brastemp' }
+  },
+  {
+    id: 'geladeira-consul-duplex-375l',
+    name: 'Geladeira Consul Duplex 375l',
+    categoryId: 'geladeiras',
+    slug: 'geladeira-consul-duplex-375l',
+    shortDescription: 'Geladeira Consul Duplex, refrigeração eficiente e divisão interna inteligente.',
+    benefits: ['Frost Free Automático', 'Espaço Duplex', 'Praticidade Consul'],
+    recommendedUses: ['Cozinhas temporárias', 'Eventos', 'Catering'],
+    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Capacidade': '375 Litros', 'Marca': 'Consul' }
+  },
+  {
+    id: 'expositor-gelopar-gptu-40',
+    name: 'Expositor Gelopar 410L',
+    categoryId: 'expositores-de-bebidas',
+    slug: 'expositor-gelopar-410l-gptu40',
+    shortDescription: 'Expositor Gelopar 410 litros ideal para sucos, refrigerantes, água, sovertes e sobremesas.',
+    benefits: ['Porta de vidro iluminada', 'Temperatura regulável', 'Design robusto'],
+    recommendedUses: ['Kiosques', 'Pontos de venda', 'Festas corporativas'],
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '89,00 KG' }
+  },
+  {
+    id: 'cervejeira-gelopar-410l',
+    name: 'Cervejeira Gelopar 410L',
+    categoryId: 'cervejeiras',
+    slug: 'cervejeira-gelopar-410l-grba400',
+    shortDescription: 'Cervejeira potente Gelopar 410 Litros com porta de vidro cega térmica.',
+    benefits: ['Frio intenso para cervejas', 'Acabamento durável', 'Alta vazão'],
+    recommendedUses: ['Serviços de bar', 'Festas de confraternização', 'Food Trucks'],
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '98,00 KG' }
+  },
+  {
+    id: 'midea-flex-96l',
+    name: 'Midea Flex 96L',
+    categoryId: 'expositores-de-bebidas',
+    slug: 'expositora-midea-flex-96l',
+    shortDescription: 'Expositor pequeno Midea de 96L com porta de vidro.',
+    benefits: ['Tamanho conveniente sob balcão', 'Estética elegante', 'Iluminação LED'],
+    recommendedUses: ['Drink bars', 'Camarins exclusivos', 'Degustações'],
+    specs: { 'Cor': 'Preto', 'Voltagem': '220V', 'Peso': '35,00 KG' }
+  },
+  {
+    id: 'micro-ondas-electrolux-34l',
+    name: 'Micro-ondas Electrolux 34 Litros.',
+    categoryId: 'micro-ondas',
+    slug: 'micro-ondas-electrolux-34l-meo44',
+    shortDescription: 'Micro-ondas com 34 litros e várias funções pré-programadas.',
+    benefits: ['Função Tira Odor', 'Menu Kids/Dia-a-Dia', 'Amplo prato giratório'],
+    recommendedUses: ['Refeitórios', 'Espaços de break', 'Camarins'],
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '16,00 KG' }
   }
 ];

@@ -20,11 +20,6 @@ export function Footer() {
             <p className="text-sm text-gray-400">
               O melhor custo-benefício em locação de equipamentos de refrigeração e utilidades no Rio de Janeiro. Agilidade e compromisso em primeiro lugar.
             </p>
-            <div className="pt-4 flex flex-col gap-2">
-               {/* DIMENSION: Visit Rio logo: 120x40 (aprox) */}
-               <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Mantenedores do</span>
-               <img src="https://res.cloudinary.com/doqw5aqcf/image/upload/v1773600812/logo_visit_rio_wi8b1y.svg" alt="Visit RIO" className="h-8 w-auto" loading="lazy" />
-            </div>
           </div>
 
           <div>

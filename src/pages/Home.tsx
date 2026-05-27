@@ -146,18 +146,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Visit Rio */}
-      <section className="py-12 bg-[#E10600]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-6">
-           <div className="text-right">
-             <span className="text-sm font-bold text-white uppercase tracking-widest block mb-1">Orgulho Carioca</span>
-             <h3 className="text-xl font-semibold text-white">Mantenedores do</h3>
-           </div>
-           {/* DIMENSION: Visit Rio logo: 160x50 (aprox) */}
-           <img src="https://res.cloudinary.com/doqw5aqcf/image/upload/v1773600812/logo_visit_rio_wi8b1y.svg" alt="Visit RIO" className="h-16 w-auto drop-shadow-sm" loading="lazy" />
-        </div>
-      </section>
-
       {/* Categorias */}
       <section id="categorias" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

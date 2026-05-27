@@ -82,34 +82,58 @@ export default function Category() {
         </div>
       </section>
 
-      {/* SEO Blocks */}
-      <section className="py-16 bg-gray-50 border-t border-gray-100">
-         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-               <h3 className="text-2xl font-bold text-gray-900 mb-4">Por que alugar {category.name.toLowerCase()} com a Viploc?</h3>
-               <ul className="space-y-4">
-                  <li className="flex items-start">
-                     <span className="text-[#E10600] mr-2 mt-1">✔</span>
-                     <p className="text-gray-700"><strong>Atendemos todo o Rio de Janeiro:</strong> Logística rápida para a região Metropolitana do RJ.</p>
-                  </li>
-                  <li className="flex items-start">
-                     <span className="text-[#E10600] mr-2 mt-1">✔</span>
-                     <p className="text-gray-700"><strong>Custo-benefício incomparável:</strong> Por que comprar se você pode alugar para a temporada do seu negócio ou evento?</p>
-                  </li>
-                  <li className="flex items-start">
-                     <span className="text-[#E10600] mr-2 mt-1">✔</span>
-                     <p className="text-gray-700"><strong>Entrega rápida:</strong> Atendimento desburocratizado e exclusivo via WhatsApp.</p>
-                  </li>
-               </ul>
+      {/* FAQ & Areas Atendidas */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          {/* FAQ */}
+          <div>
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-8">Dúvidas sobre {category.name}</h2>
+            <div className="space-y-6">
+              {[
+                { q: `Como funciona a entrega de ${category.name.toLowerCase()}?`, a: 'Nós entregamos e retiramos no local que você precisar. A montagem/instalação básica também está inclusa no serviço e deixamos tudo funcionando.' },
+                { q: 'Qual o período mínimo de locação?', a: 'Oferecemos flexibilidade total: você pode alugar por diárias para eventos rápidos, quinzenal ou contratos mensais.' },
+                { q: `Os equipamentos de ${category.name.toLowerCase()} são higienizados?`, a: 'Sim! Todos os nossos equipamentos passam por um rigoroso processo de higienização e manutenção preventiva antes de cada locação.' },
+                { q: 'E se apresentar algum defeito?', a: 'Temos equipe técnica de prontidão. Em caso de problemas não resolvidos rapidamente no local, realizamos a substituição do equipamento sem custo extra.' }
+              ].map((faq, index) => (
+                <div key={index} className="bg-gray-50 rounded-2xl p-6">
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">{faq.q}</h4>
+                  <p className="text-gray-600">{faq.a}</p>
+                </div>
+              ))}
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
-               <h3 className="text-xl font-bold mb-4">Ficou com dúvida sobre capacidades?</h3>
-               <p className="text-gray-600 mb-6">Nossos especialistas estão prontos para te ajudar a escolher o equipamento exato para o tamanho do seu projeto.</p>
-               <Button variant="primary" isWhatsApp={true} whatsappMessage={`Olá, preciso de ajuda para dimensionar e agendar o aluguel de ${category.name.toLowerCase()}.`}>
-                 Falar com Especialista
-               </Button>
+          </div>
+
+          {/* Áreas Atendidas */}
+          <div>
+            <div className="bg-[#E10600]/5 rounded-3xl p-8 lg:p-12 border border-[#E10600]/10 h-full">
+              <h2 className="text-3xl font-extrabold text-[#E10600] mb-4">Áreas Atendidas no Rio de Janeiro</h2>
+              <p className="text-gray-700 mb-8 text-lg">Entregamos com rapidez e agilidade em diversas regiões. Confira as principais áreas que cobrimos:</p>
+              
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { name: 'Zona Sul', desc: 'Copacabana, Ipanema, Leblon, Botafogo, Flamengo...' },
+                  { name: 'Zona Oeste', desc: 'Barra da Tijuca, Recreio, Jacarepaguá...' },
+                  { name: 'Zona Norte', desc: 'Tijuca, Méier, Maracanã, Vila Isabel, Penha...' },
+                  { name: 'Centro', desc: 'Centro, Lapa, Santa Teresa, Zona Portuária...' }
+                ].map((area, index) => (
+                  <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                    <span className="font-bold text-gray-900 text-lg mb-1">{area.name}</span>
+                    <span className="text-sm text-gray-500 leading-relaxed">{area.desc}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 p-4 bg-white rounded-xl border border-gray-100 flex items-center">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 shrink-0">
+                  <span className="text-green-600 text-xl font-bold">✓</span>
+                </div>
+                <p className="text-gray-700 text-sm font-medium">Logística otimizada para garantir que seu equipamento chegue na hora certa, independente da região.</p>
+              </div>
             </div>
-         </div>
+          </div>
+
+        </div>
       </section>
     </>
   );
