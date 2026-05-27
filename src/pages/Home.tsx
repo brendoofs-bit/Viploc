@@ -170,14 +170,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
             {categories.map((cat) => {
               const bgImages: Record<string, string> = {
-                'geladeiras': 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?q=80&w=600&auto=format&fit=crop',
-                'freezers': 'https://images.unsplash.com/photo-1590004953392-5aba2e72269a?q=80&w=600&auto=format&fit=crop',
-                'frigobar': 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=600&auto=format&fit=crop',
-                'expositores-de-bebidas': 'https://images.unsplash.com/photo-1601001815894-010ed18f3a3c?q=80&w=600&auto=format&fit=crop',
-                'cervejeiras': 'https://images.unsplash.com/photo-1614316104996-30c14c53ee61?q=80&w=600&auto=format&fit=crop',
-                'purificador-de-agua': 'https://images.unsplash.com/photo-1523362628745-0c100150b504?q=80&w=600&auto=format&fit=crop',
-                'micro-ondas': 'https://images.unsplash.com/photo-1585659722983-38ca84b80bb5?q=80&w=600&auto=format&fit=crop',
-                'tv': 'https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=600&auto=format&fit=crop',
+                'geladeiras': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779884337/categoria-geladeiras-viploc_ujcdos.png',
+                'freezers': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779884909/categoria-freezer-viploc_cb3sbg.png',
+                'frigobar': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779885562/categoria-frigobar-viploc_wpzm78.png',
+                'expositores-de-bebidas': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779885743/categoria-expositor-bebidas-viploc_dnjalk.png',
+                'cervejeiras': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779885941/categoria-cervejeira-viploc_m3m87q.png',
+                'purificador-de-agua': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779886598/categoria-purificador-agua-viploc_iabg6o.png',
+                'micro-ondas': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779886739/categoria-microondas-viploc_upb9pe.png',
+                'tv': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779887006/categoria-tv-viploc_dl5yqo.png',
               };
               const bgImage = bgImages[cat.slug] || 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=600';
               
