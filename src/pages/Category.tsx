@@ -44,12 +44,12 @@ export default function Category() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {categoryProducts.map((prod) => (
                 <Link key={prod.id} to={`/locacao/${category.slug}/${prod.slug}`} className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:border-red-100 transition-all flex flex-col">
-                  {/* DIMENSION: Card produto (thumb): 800x600 */}
-                  <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                  {/* DIMENSION: Card produto (thumb): 800x600 (Recomendado para preencher todo o bloco) */}
+                  <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden flex items-center justify-center">
                     <img 
-                       src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&auto=format&fit=crop" 
+                       src={prod.image || "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&auto=format&fit=crop"} 
                        alt={prod.name} 
-                       className="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 rounded" 
+                       className={`object-contain w-full h-full mix-blend-multiply opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-500 ${!prod.image && "grayscale"}`} 
                        loading="lazy" 
                        width={800} 
                        height={600} 

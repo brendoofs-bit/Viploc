@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { categories } from '@/data/categories';
@@ -12,9 +13,18 @@ export default function Product() {
   const category = categories.find(c => c.slug === categorySlug);
   const product = products.find(p => p.slug === productSlug);
   
+  const defaultImage = product?.image || "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1200&auto=format&fit=crop";
+  const [mainImage, setMainImage] = useState(defaultImage);
+
+  useEffect(() => {
+    setMainImage(defaultImage);
+  }, [productSlug, defaultImage]);
+
   if (!category || !product) {
     return <Navigate to="/" replace />;
   }
+
+  const images = product.gallery && product.gallery.length > 0 ? product.gallery : [defaultImage];
 
   const wppMessage = `Olá! Quero alugar ${product.name}. Pode me passar disponibilidade, valores e confirmar as áreas de entrega no RJ?`;
 
@@ -69,11 +79,11 @@ export default function Product() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
             {/* Imagem Principal */}
-            <div>
-               <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8 flex items-center justify-center sticky top-28 h-[500px]">
+            <div className="flex flex-col gap-4 sticky top-28">
+               <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8 flex items-center justify-center h-[400px] md:h-[500px] relative overflow-hidden">
                  {/* DIMENSION Galeria produto: 1200x900 */}
                  <img 
-                    src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1200&auto=format&fit=crop" 
+                    src={mainImage} 
                     alt={product.name} 
                     className="w-full h-full object-contain mix-blend-darken hover:scale-105 transition-transform duration-500"
                     width={1200}
@@ -84,6 +94,21 @@ export default function Product() {
                     <Badge className="bg-gray-800 text-white border-0">Alto Desempenho</Badge>
                  </div>
                </div>
+
+               {/* Thumbnails */}
+               {images.length > 1 && (
+                 <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+                   {images.map((img, idx) => (
+                     <button
+                       key={idx}
+                       onClick={() => setMainImage(img)}
+                       className={`relative w-20 h-20 md:w-24 md:h-24 rounded-xl border flex-shrink-0 bg-gray-50 overflow-hidden transition-all ${mainImage === img ? 'border-[#E10600] ring-2 ring-[#E10600]/20 scale-105' : 'border-gray-200 hover:border-gray-300'}`}
+                     >
+                       <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-contain p-2 mix-blend-darken" />
+                     </button>
+                   ))}
+                 </div>
+               )}
             </div>
 
             {/* Informações do Produto */}

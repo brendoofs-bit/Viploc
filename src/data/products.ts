@@ -100,16 +100,6 @@ export const products = [
     specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Marca': 'Metalfrio' }
   },
   {
-    id: 'geladeira-375l-brastemp',
-    name: 'Geladeira Brastemp 375L',
-    categoryId: 'geladeiras',
-    slug: 'geladeira-375l-brastemp',
-    shortDescription: 'Locação perfeita para qualquer ocasião. Refrigerador potente com um ótimo espaço para armazenamento interno.',
-    benefits: ['Divisão interna otimizada', 'Frost Free', 'Desempenho Brastemp'],
-    recommendedUses: ['Camarins', 'Apoio de cozinhas', 'Staff'],
-    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Marca': 'Brastemp' }
-  },
-  {
     id: 'frigobar-consul-117l',
     name: 'Frigobar Consul 117L',
     categoryId: 'frigobar',
@@ -131,9 +121,16 @@ export const products = [
   },
   {
     id: 'geladeira-frost-free-brastemp-375l',
-    name: 'Geladeira Frost Free Brastemp 375l',
+    name: 'Geladeira Frost Free Brastemp 375L',
     categoryId: 'geladeiras',
     slug: 'geladeira-frost-free-brastemp-375l',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780355340/geladeira-branca-dupla-porta-frontal-moderno_hpyy4g.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780355340/geladeira-branca-dupla-porta-frontal-moderno_hpyy4g.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780356088/geladeira-branca-electrolux-duas-portas-com-painel-eletronico_dlljbr.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780356088/geladeira-branca-duas-portas-painel-vertical-modelo-moderno_vkakdl.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780356088/geladeira-frost-free-com-porta-aberta-e-compartimentos-internos_bfapgc.webp'
+    ],
     shortDescription: 'Geladeira Frost Free Brastemp, resfriamento excelente e amplo espaço.',
     benefits: ['Frost Free Automático', 'Espaço Duplex', 'Refrigeração de ponta'],
     recommendedUses: ['Cozinhas temporárias', 'Eventos esportivos', 'Catering'],
@@ -141,7 +138,7 @@ export const products = [
   },
   {
     id: 'geladeira-consul-duplex-375l',
-    name: 'Geladeira Consul Duplex 375l',
+    name: 'Geladeira Consul Duplex 375L',
     categoryId: 'geladeiras',
     slug: 'geladeira-consul-duplex-375l',
     shortDescription: 'Geladeira Consul Duplex, refrigeração eficiente e divisão interna inteligente.',

@@ -158,14 +158,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
             {categories.map((cat) => {
               const bgImages: Record<string, string> = {
-                'geladeiras': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779884337/categoria-geladeiras-viploc_ujcdos.png',
-                'freezers': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779884909/categoria-freezer-viploc_cb3sbg.png',
-                'frigobar': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779885562/categoria-frigobar-viploc_wpzm78.png',
-                'expositores-de-bebidas': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779885743/categoria-expositor-bebidas-viploc_dnjalk.png',
-                'cervejeiras': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779885941/categoria-cervejeira-viploc_m3m87q.png',
-                'purificador-de-agua': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779886598/categoria-purificador-agua-viploc_iabg6o.png',
-                'micro-ondas': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779886739/categoria-microondas-viploc_upb9pe.png',
-                'tv': 'https://res.cloudinary.com/doqw5aqcf/image/upload/v1779887006/categoria-tv-viploc_dl5yqo.png',
+                'geladeiras': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-geladeiras-viploc_dso1sc.png',
+                'freezers': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-freezer-viploc_jqndgw.png',
+                'frigobar': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-frigobar-viploc_hohtrd.png',
+                'expositores-de-bebidas': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-expositor-bebidas-viploc_bbwl6y.png',
+                'cervejeiras': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-cervejeira-viploc_vgqnow.png',
+                'purificador-de-agua': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-purificador-agua-viploc_ambwtv.png',
+                'micro-ondas': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-microondas-viploc_pqjqrl.png',
+                'tv': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-tv-viploc_e1xpok.png',
               };
               const bgImage = bgImages[cat.slug] || 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=600';
               
@@ -284,7 +284,7 @@ export default function Home() {
       {/* Vantagens */}
       <section className="py-32 relative text-white overflow-hidden" ref={vantagensRef}>
         <motion.div 
-           className="absolute inset-0 bg-[url('https://res.cloudinary.com/doqw5aqcf/image/upload/v1779674929/funcionarios-uniforme-van-transporte-comportimento-aberto-equipamento-montanha-rio-de-janeiro_l0wxlk.webp')] bg-cover bg-center"
+           className="absolute inset-0 bg-[url('https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352564/funcionarios-uniforme-van-transporte-comportimento-aberto-equipamento-montanha-rio-de-janeiro_ownivl.webp')] bg-cover bg-center"
            style={{ y: parallaxY, scale: 1.2 }}
         ></motion.div>
         <div className="absolute inset-0 bg-[#E10600]/80"></div>
