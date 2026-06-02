@@ -4,6 +4,13 @@ export const products = [
     name: 'Expositor de Bebidas Gelopar 570L',
     categoryId: 'expositores-de-bebidas',
     slug: 'expositor-gelopar-570l-br',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360964/camara-refrigerada-vertical-porta-aberta-prateleiras-compartimento-inferior_cmb9qg.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360964/camara-refrigerada-vertical-porta-aberta-prateleiras-compartimento-inferior_cmb9qg.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360961/camara-refrigerada-branca-porta-aberta-com-prateleiras_exakmd.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360960/refrigerador-vertical-branco-gelopar-com-bebidas-nas-prateleiras_kpabih.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360962/freezer-vertical-branco-porta-aberta-prateleiras-gaveta_rwfbqq.webp'
+    ],
     shortDescription: 'Expositor Gelopar 570 litros Branco, ideal para refrigeração de bebidas.',
     benefits: ['Porta de vidro', 'Alta capacidade', 'Controle de temperatura'],
     recommendedUses: ['Comércio', 'Restaurantes', 'Eventos'],
@@ -192,6 +199,13 @@ export const products = [
     name: 'Expositor Gelopar 410L',
     categoryId: 'expositores-de-bebidas',
     slug: 'expositor-gelopar-410l-gptu40',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780361588/geladeira-vertical-expositora-branca-gelopar-com-vidro-e-prateleiras_yppu4d.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780361588/geladeira-vertical-expositora-branca-gelopar-com-vidro-e-prateleiras_yppu4d.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780361587/freezer-vertical-gelopar-branco-com-tampa-e-prateleiras_l1iivh.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780361584/freezer-vertical-branco-gelopac-porta-aberta-prateleiras_b67pxu.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780361585/refrigerador-vertical-gelopar-para-bebidas-com-porta-de-vidro_a6krjj.webp'
+    ],
     shortDescription: 'Expositor Gelopar 410 litros ideal para sucos, refrigerantes, água, sovertes e sobremesas.',
     benefits: ['Porta de vidro iluminada', 'Temperatura regulável', 'Design robusto'],
     recommendedUses: ['Kiosques', 'Pontos de venda', 'Festas corporativas'],
@@ -212,6 +226,13 @@ export const products = [
     name: 'Midea Flex 96L',
     categoryId: 'expositores-de-bebidas',
     slug: 'expositora-midea-flex-96l',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780362088/adega-eletrica-midea-preta-com-vidro-e-prateleiras_cjse2p.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780362088/adega-eletrica-midea-preta-com-vidro-e-prateleiras_cjse2p.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780362081/cervejeira-midea-porta-vidro-preta-prateleiras_usziqj.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780362057/adega-ou-cervejeira-climatizada-porta-aberta-prateleiras-painel-digital_ko3s3f.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780362086/geladeira-midea-com-garrafas-de-bebidas-e-iluminacao_zex6u9.webp'
+    ],
     shortDescription: 'Expositor pequeno Midea de 96L com porta de vidro.',
     benefits: ['Tamanho conveniente sob balcão', 'Estética elegante', 'Iluminação LED'],
     recommendedUses: ['Drink bars', 'Camarins exclusivos', 'Degustações'],
