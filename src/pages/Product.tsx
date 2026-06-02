@@ -38,8 +38,12 @@ export default function Product() {
     <>
       <Helmet>
         <title>Aluguel de {product.name} no RJ | Viploc</title>
+        <meta name="title" content={`Aluguel de ${product.name} no RJ | Viploc`} />
         <meta name="description" content={`${product.shortDescription} Melhor custo-benefício para locação de ${category.name.toLowerCase()} no Rio de Janeiro. Faça sua cotação!`} />
         <link rel="canonical" href={`https://viploc.com.br/locacao/${category.slug}/${product.slug}`} />
+        <meta property="og:title" content={`Aluguel de ${product.name} no RJ | Viploc`} />
+        <meta property="og:description" content={`${product.shortDescription} Melhor custo-benefício para locação de ${category.name.toLowerCase()} no Rio de Janeiro. Faça sua cotação!`} />
+        <meta property="og:image" content={product.image || "https://viploc.com.br/images/og-default.jpg"} />
         
         {/* Schema markup for Product */}
         <script type="application/ld+json">
@@ -47,7 +51,7 @@ export default function Product() {
             "@context": "https://schema.org/",
             "@type": "Product",
             "name": product.name,
-            "image": "https://viploc.com.br/images/og-default.jpg",
+            "image": product.image || "https://viploc.com.br/images/og-default.jpg",
             "description": product.shortDescription,
             "brand": {
               "@type": "Brand",

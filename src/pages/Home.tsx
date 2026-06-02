@@ -29,9 +29,12 @@ export default function Home() {
     <>
       <Helmet>
         <title>Viploc - Locação de Equipamentos e Refrigeração no RJ</title>
+        <meta name="title" content="Viploc - Locação de Equipamentos e Refrigeração no RJ" />
         <meta name="description" content="O melhor custo-benefício em locação de Geladeiras, Freezers, Cervejeiras, Micro-ondas e TVs no Rio de Janeiro. Entrega rápida." />
         <link rel="canonical" href="https://viploc.com.br/" />
         {/* DIMENSION OG Image: 1200x630 */}
+        <meta property="og:title" content="Viploc - Locação de Equipamentos e Refrigeração no RJ" />
+        <meta property="og:description" content="O melhor custo-benefício em locação de Geladeiras, Freezers, Cervejeiras, Micro-ondas e TVs no Rio de Janeiro. Entrega rápida." />
         <meta property="og:image" content="/images/og-default.jpg" />
       </Helmet>
 

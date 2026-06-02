@@ -20,8 +20,11 @@ export default function Category() {
     <>
       <Helmet>
         <title>Aluguel de {category.name} no Rio de Janeiro | Viploc</title>
+        <meta name="title" content={`Aluguel de ${category.name} no Rio de Janeiro | Viploc`} />
         <meta name="description" content={`A Viploc é especialista em locação de ${category.name.toLowerCase()} no RJ. Entrega expressa, equipamentos revisados e o melhor custo-benefício. Confira o catálogo.`} />
         <link rel="canonical" href={`https://viploc.com.br/locacao/${category.slug}`} />
+        <meta property="og:title" content={`Aluguel de ${category.name} no Rio de Janeiro | Viploc`} />
+        <meta property="og:description" content={`A Viploc é especialista em locação de ${category.name.toLowerCase()} no RJ. Entrega expressa, equipamentos revisados e o melhor custo-benefício. Confira o catálogo.`} />
       </Helmet>
 
       {/* Hero Categorias */}
