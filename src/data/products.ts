@@ -72,6 +72,13 @@ export const products = [
     name: 'Cervejeira Gelopar 570L',
     categoryId: 'cervejeiras',
     slug: 'cervejeira-gelopar-570l-pr',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366571/armario-refrigerado-vertical-preto-vidro-aberto-prateleiras-painel-digital_ek5euu.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366571/armario-refrigerado-vertical-preto-vidro-aberto-prateleiras-painel-digital_ek5euu.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366567/maquina-refrigerada-vertical-porta-de-vidro-frontal-preto-e-branco_fsqil1.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366564/garrafeira-vertical-porta-de-vidro-com-display-de-temperatura-e-prateleiras_ya91cq.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366566/cervejaria-vertical-porta-de-vidro-garrafas-iluminacao-painel-controle-preto_ukndr0.webp'
+    ],
     shortDescription: 'Cervejeira Gelopar Preta 570 litros, para bares, restaurantes, festas e eventos.',
     benefits: ['Controlador eletrônico', 'Refrigeração de alta eficiência', 'Design elegante preta'],
     recommendedUses: ['Bares', 'Festas', 'Eventos esportivos'],
@@ -82,6 +89,13 @@ export const products = [
     name: 'Cervejeira Gelopar Full Black 570L',
     categoryId: 'cervejeiras',
     slug: 'cervejeira-gelopar-full-black-570l',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367414/freezer-vertical-porta-vidro-60l-bebidas_nxl2di.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367414/freezer-vertical-porta-vidro-60l-bebidas_nxl2di.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367410/cervejeira-vertical-preta-porta-de-vidro-prateleiras-iluminacao_rrykbq.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367412/camara-expositora-eos-birkhan-com-porta-de-vidro-e-prateleiras_exhlah.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367409/expositor-refrigerado-vertical-porta-vidro-latas-coca-cola_zkx2in.webp'
+    ],
     shortDescription: 'Cervejeira Gelopar Full Black de luxo 570 Litros para atender em qualquer situação, ótima armazenagem.',
     benefits: ['Design Full Black exclusivo', 'Iluminação em LED', 'Cerveja perfeitamente gelada'],
     recommendedUses: ['Eventos premium', 'Camarotes', 'Bares sofisticados'],
@@ -213,10 +227,16 @@ export const products = [
   },
   {
     id: 'cervejeira-gelopar-410l',
-    name: 'Cervejeira Gelopar 410L',
+    name: 'Cervejeira Gelopar 420L',
     categoryId: 'cervejeiras',
     slug: 'cervejeira-gelopar-410l-grba400',
-    shortDescription: 'Cervejeira potente Gelopar 410 Litros com porta de vidro cega térmica.',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366110/geladeira-vertical-branca-porta-vidro-visao-prateleiras-visor-temperatura_do9fky.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366110/geladeira-vertical-branca-porta-vidro-visao-prateleiras-visor-temperatura_do9fky.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366108/geladeira-vertical-para-medicamentos-com-vidro-e-prateleiras_osadhg.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366107/refrigerador-vertical-para-bebidas-com-iluminacao-interna-e-garrafas_i4zoo7.webp'
+    ],
+    shortDescription: 'Cervejeira potente Gelopar 420 Litros com porta de vidro cega térmica.',
     benefits: ['Frio intenso para cervejas', 'Acabamento durável', 'Alta vazão'],
     recommendedUses: ['Serviços de bar', 'Festas de confraternização', 'Food Trucks'],
     specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '98,00 KG' }
