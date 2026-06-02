@@ -14,6 +14,13 @@ export const products = [
     name: 'Freezer Consul 534L',
     categoryId: 'freezers',
     slug: 'freezer-consul-534l-chb53eb',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358414/congelador-horizontal-branco-tampa-superior-controle-frontal_1_wyxpbu.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358414/congelador-horizontal-branco-tampa-superior-controle-frontal_1_wyxpbu.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358412/freezer-horizontal-branco-com-tampa-superior-e-painel-frontal_yq4q2q.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358404/freezer-horizontal-branco-tampa-dupla-painel-controle_1_af3kul.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358413/freezer-horizontal-branco-tampa-aberta-compartimento-interno_bbuyu8.webp'
+    ],
     shortDescription: 'Freezer Horizontal Consul 534 litros de alta capacidade e armazenamento.',
     benefits: ['Amplo espaço interno', 'Alta performance', 'Dupla ação'],
     recommendedUses: ['Grandes eventos', 'Cozinhas industriais', 'Estoque de alimentos'],
@@ -24,6 +31,13 @@ export const products = [
     name: 'Freezer Consul 309L',
     categoryId: 'freezers',
     slug: 'freezer-consul-309l-cha31fb',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358801/freezer-horizontal-branco-tampa-superior-painel-frontal_ttkeno.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358801/freezer-horizontal-branco-tampa-superior-painel-frontal_ttkeno.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358799/freezer-horizontal-branco-consul-com-tampa-superior_hqkq8k.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358799/freezer-horizontal-branco-com-tampa-superior-e-painel-lateral_ol1iqd.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780358801/tampa-aberta-freezer-branco-com-visor-interno_eewad9.webp'
+    ],
     shortDescription: 'Freezer Horizontal Consul 309 litros, compacto e eficiente.',
     benefits: ['Eficiência energética', 'Congelamento rápido', 'Tamanho ideal'],
     recommendedUses: ['Eventos de médio porte', 'Comércio', 'Residencial'],
@@ -141,6 +155,13 @@ export const products = [
     name: 'Geladeira Consul Duplex 375L',
     categoryId: 'geladeiras',
     slug: 'geladeira-consul-duplex-375l',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780357446/geladeira-branca-duas-portas-painel-controle-puxador-horizontal_trgcea.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780357446/geladeira-branca-duas-portas-painel-controle-puxador-horizontal_trgcea.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780356088/geladeira-branca-electrolux-duas-portas-com-painel-eletronico_dlljbr.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780356088/geladeira-branca-duas-portas-painel-vertical-modelo-moderno_vkakdl.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780356088/geladeira-frost-free-com-porta-aberta-e-compartimentos-internos_bfapgc.webp'
+    ],
     shortDescription: 'Geladeira Consul Duplex, refrigeração eficiente e divisão interna inteligente.',
     benefits: ['Frost Free Automático', 'Espaço Duplex', 'Praticidade Consul'],
     recommendedUses: ['Cozinhas temporárias', 'Eventos', 'Catering'],

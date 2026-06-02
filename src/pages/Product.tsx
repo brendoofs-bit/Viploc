@@ -13,7 +13,15 @@ export default function Product() {
   const category = categories.find(c => c.slug === categorySlug);
   const product = products.find(p => p.slug === productSlug);
   
-  const defaultImage = product?.image || "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1200&auto=format&fit=crop";
+  let images = product?.gallery && product.gallery.length > 0 
+    ? product.gallery.filter(img => img !== product.image) 
+    : [];
+
+  if (images.length === 0) {
+    images = [product?.image || "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1200&auto=format&fit=crop"];
+  }
+
+  const defaultImage = images[0];
   const [mainImage, setMainImage] = useState(defaultImage);
 
   useEffect(() => {
@@ -23,8 +31,6 @@ export default function Product() {
   if (!category || !product) {
     return <Navigate to="/" replace />;
   }
-
-  const images = product.gallery && product.gallery.length > 0 ? product.gallery : [defaultImage];
 
   const wppMessage = `Olá! Quero alugar ${product.name}. Pode me passar disponibilidade, valores e confirmar as áreas de entrega no RJ?`;
 
