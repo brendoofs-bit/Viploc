@@ -131,6 +131,13 @@ export const products = [
     name: 'Frigobar Consul 117L',
     categoryId: 'frigobar',
     slug: 'frigobar-consul-117l',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360111/frigobar-vertical-branca-consul-frontal_nsx1ds.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360111/frigobar-vertical-branca-consul-frontal_nsx1ds.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360107/frigobar-vertical-consul-branca-compacta-vista-frontal_z3mpma.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360108/frigobar-consul-branca-porta-frontal-lisa_ggltf8.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780360110/frigobar-compacta-porta-aberta-compartimentos-refrigeracao-congelador_itrjxy.webp'
+    ],
     shortDescription: 'Frigobar prático Consul 117 litros, ótima armazenagem interna, perfeito para quartos de hotel, Airbnb, reuniões e salas comerciais.',
     benefits: ['Espaço interno amplo', 'Porta latas', 'Gelo rápido'],
     recommendedUses: ['Quartos', 'Stands de feiras', 'Salas executivas'],
