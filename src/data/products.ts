@@ -106,6 +106,12 @@ export const products = [
     name: 'TV 43" 4K',
     categoryId: 'tv',
     slug: 'tv-43-4k',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780395902/smart-tv-tudo-em-1-tela-azul-icone-4k-samsung-tv-plus-knox-security_j15ynv.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780395902/smart-tv-tudo-em-1-tela-azul-icone-4k-samsung-tv-plus-knox-security_j15ynv.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780395902/tv-tudo-em-1-43-polegadas-recursos-4k-smart-tv_unmdsc.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780395902/tv-tudo-em-1-promocional-com-recursos-4k-smart-tv-streaming-e-seguranca_unznb3.webp'
+    ],
     shortDescription: 'Smart TV 43 polegadas com resolução 4K, perfeita para uso particular e temporadas.',
     benefits: ['Qualidade de imagem 4K', 'Fácil instalação', 'Compacta'],
     recommendedUses: ['Feiras', 'Apresentações', 'Stands'],
@@ -113,9 +119,15 @@ export const products = [
   },
   {
     id: 'tv-43-tcl',
-    name: '1401 - TV 43" TCL P755',
+    name: 'TV 43" TCL',
     categoryId: 'tv',
-    slug: 'tv-43-tcl-p755',
+    slug: 'tv-43-tcl',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780396368/tv-tcl-4k-uhd-com-tela-abstrata-dourada-azul_pjfrsq.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780396368/tv-tcl-4k-uhd-com-tela-abstrata-dourada-azul_pjfrsq.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780396369/tcl-classic-4k-smart-tv-p755-hdr-350nits-divulgacao_ciltab.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780396369/tv-tcl-4k-uhd-arte-abstrata-dourada-azul-prata_kvjuwx.webp'
+    ],
     shortDescription: 'TV Smart TCL 43 polegadas moderna e eficiente, ótima para uso particular, Airbnb, temporadas.',
     benefits: ['Sistema Smart inteligente', 'Conectividade rápida', 'Bordas finas'],
     recommendedUses: ['Salas de reunião', 'Palestras', 'Exibição de vídeos'],
@@ -126,6 +138,12 @@ export const products = [
     name: 'Smart TV TCL QLED 65" 4K Wi-Fi Android TV',
     categoryId: 'tv',
     slug: 'tv-65-tcl-qled',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780396786/smart-tv-tcl-65-qled-aiqp-dolby-vision-178-graus-global-top1-2025-novo_vvy7yl.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780396786/smart-tv-tcl-65-qled-aiqp-dolby-vision-178-graus-global-top1-2025-novo_vvy7yl.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780396786/tv-tcl-65-polegadas-qled-ai-pq-dolby-atmos-178-gobal-top-1-2025-novo_e92tjp.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780396786/tv-tcl-qled-aipq-65-polegadas-dolby-vision-atmos-178-graus-flor-azul_dmegna.webp'
+    ],
     shortDescription: 'Super Smart TV TCL QLED de 65 polegadas 4K, ideal para espaços de festas, bares, restaurantes e eventos.',
     benefits: ['Painel QLED vibrante', 'Android TV', 'Tamanho imersivo'],
     recommendedUses: ['Grandes auditórios', 'Stands de destaque', 'Eventos VIP'],
