@@ -169,6 +169,12 @@ export const products = [
     name: 'Purificador de Água Consul Cinza',
     categoryId: 'purificador-de-agua',
     slug: 'purificador-consul-bivolt',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367971/cafeteira-consul-preta-design-compacto-bandeja-frontal_fmasqv.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367971/cafeteira-consul-preta-design-compacto-bandeja-frontal_fmasqv.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367969/purificador-de-agua-consul-cinza-painel-frontal-faixa-verde_d48l6f.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780367969/purificador-de-agua-consul-preto-com-painel-frontal_jgjrkk.webp'
+    ],
     shortDescription: 'Purificador de água Consul compacto e completo, ideal para festas, clínicas, salas comerciais e uso particular.',
     benefits: ['Água gelada e natural', 'Classificação máxima em filtragem', 'Bivolt'],
     recommendedUses: ['Staff de produções', 'Expositores', 'DJs e convidados'],
