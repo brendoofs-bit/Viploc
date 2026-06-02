@@ -233,7 +233,7 @@ export const products = [
   },
   {
     id: 'cervejeira-gelopar-410l',
-    name: 'Cervejeira Gelopar 420L',
+    name: 'Cervejeira Gelopar 410L',
     categoryId: 'cervejeiras',
     slug: 'cervejeira-gelopar-410l-grba400',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366110/geladeira-vertical-branca-porta-vidro-visao-prateleiras-visor-temperatura_do9fky.webp',
@@ -242,7 +242,7 @@ export const products = [
       'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366108/geladeira-vertical-para-medicamentos-com-vidro-e-prateleiras_osadhg.webp',
       'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780366107/refrigerador-vertical-para-bebidas-com-iluminacao-interna-e-garrafas_i4zoo7.webp'
     ],
-    shortDescription: 'Cervejeira potente Gelopar 420 Litros com porta de vidro cega térmica.',
+    shortDescription: 'Cervejeira potente Gelopar 410 Litros com porta de vidro cega térmica.',
     benefits: ['Frio intenso para cervejas', 'Acabamento durável', 'Alta vazão'],
     recommendedUses: ['Serviços de bar', 'Festas de confraternização', 'Food Trucks'],
     specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '98,00 KG' }
@@ -269,6 +269,12 @@ export const products = [
     name: 'Micro-ondas Electrolux 34 Litros.',
     categoryId: 'micro-ondas',
     slug: 'micro-ondas-electrolux-34l-meo44',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780368912/microondas-electrolux-com-painel-digital-display-azul_trirdb.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780368912/microondas-electrolux-com-painel-digital-display-azul_trirdb.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780368910/microondas-electrolux-com-painel-digital-e-teclado-numerico_jl01fs.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780368910/micro-ondas-branco-aberto-painel-digital-prato-giratorio_kxthf8.webp'
+    ],
     shortDescription: 'Micro-ondas com 34 litros e várias funções pré-programadas.',
     benefits: ['Função Tira Odor', 'Menu Kids/Dia-a-Dia', 'Amplo prato giratório'],
     recommendedUses: ['Refeitórios', 'Espaços de break', 'Camarins'],
