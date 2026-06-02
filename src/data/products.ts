@@ -48,6 +48,13 @@ export const products = [
     name: 'Freezer Consul Vertical 246L',
     categoryId: 'freezers',
     slug: 'freezer-vertical-consul-246l',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359173/lavadora-de-roupas-branca-compacta-visao-frontal_ebvkck.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359173/lavadora-de-roupas-branca-compacta-visao-frontal_ebvkck.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359170/purificador-climatizador-ar-branco-consul-vista-frontal_moe16p.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359171/purificador-ar-climatizador-portatil-branco-consul_zicbai.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359172/geladeira-frost-free-aberta-prateleiras-e-gavetas_sxkbh8.webp'
+    ],
     shortDescription: 'Freezer Vertical Consul 246 litros com gavetas, ideal para espaços apertados.',
     benefits: ['Organização em gavetas', 'Otimiza espaço', 'Fácil acesso'],
     recommendedUses: ['Cozinhas', 'Prédios comerciais', 'Eventos corporativos'],
@@ -108,6 +115,12 @@ export const products = [
     name: 'Freezer Metalfrio 292L Tampa de Vidro ',
     categoryId: 'freezers',
     slug: 'freezer-horizontal-vidro-292l-metalfrio',
+    image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359665/maquina-de-corte-e-aquecimento-com-tampa-transparente-branca-cinza_lc4a04.webp',
+    gallery: [
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359665/maquina-de-corte-e-aquecimento-com-tampa-transparente-branca-cinza_lc4a04.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359661/freezer-horizontal-branco-cinza-tampa-de-vidro-metalfrio_yb22wv.webp',
+      'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359664/seladora-a-vacuo-domestica-metrovac-branco-cinza-com-tampa-transparente_gjlksm.webp'
+    ],
     shortDescription: 'Freezer de vitrine Metalfrio 292 Litros com tampa de vidro para facilitar o uso e economizar energia.',
     benefits: ['Tampa de vidro deslizante', 'Visibilidade para vendas', 'Consumo reduzido'],
     recommendedUses: ['Sorveterias temporárias', 'Venda de gelo', 'Eventos abertos'],
