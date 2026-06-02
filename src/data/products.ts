@@ -103,7 +103,7 @@ export const products = [
   },
   {
     id: 'tv-43-4k',
-    name: 'TV 43" 4K',
+    name: 'TV 43" Samsung 4K',
     categoryId: 'tv',
     slug: 'tv-43-4k',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780395902/smart-tv-tudo-em-1-tela-azul-icone-4k-samsung-tv-plus-knox-security_j15ynv.webp',
