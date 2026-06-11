@@ -40,10 +40,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-24 lg:py-32 flex items-center min-h-[90vh]">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-[url('https://res.cloudinary.com/doqw5aqcf/image/upload/v1779561932/festa-ao-ar-livre-tropical-convidados-ilha-de-bebidas-ao-por-do-sol_w0yqda.webp')] bg-cover bg-center"></div>
+        {/* Background Image - Mobile only */}
+        <div className="absolute inset-0 z-0 block md:hidden bg-[url('https://res.cloudinary.com/dt8fp7f6t/image/upload/v1781217697/pessoas-pepegando-bebidas-em-quiosque-de-praia-com-refri-aberto_shkpnq.webp')] bg-cover bg-center opacity-[0.18]"></div>
+        {/* Background Image - Desktop/Tablet */}
+        <div className="absolute inset-0 z-0 hidden md:block bg-[url('https://res.cloudinary.com/doqw5aqcf/image/upload/v1779561932/festa-ao-ar-livre-tropical-convidados-ilha-de-bebidas-ao-por-do-sol_w0yqda.webp')] bg-cover bg-center"></div>
         {/* Gradient Overlay for 2-column effect */}
-        <div className="absolute inset-0 z-0 bg-white/70 md:bg-transparent md:bg-gradient-to-r md:from-white md:via-white/90 md:to-white/10"></div>
+        <div className="absolute inset-0 z-0 bg-white/50 md:bg-transparent md:bg-gradient-to-r md:from-white md:via-white/90 md:to-white/10"></div>
         
         <div className="mx-auto max-w-7xl px-4 relative z-10 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
