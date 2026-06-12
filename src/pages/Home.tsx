@@ -43,7 +43,7 @@ export default function Home() {
         {/* Background Image - Mobile only */}
         <div className="absolute inset-0 z-0 block md:hidden bg-[url('https://res.cloudinary.com/dt8fp7f6t/image/upload/v1781217697/pessoas-pepegando-bebidas-em-quiosque-de-praia-com-refri-aberto_shkpnq.webp')] bg-cover bg-center opacity-[0.18]"></div>
         {/* Background Image - Desktop/Tablet */}
-        <div className="absolute inset-0 z-0 hidden md:block bg-[url('https://res.cloudinary.com/doqw5aqcf/image/upload/v1779561932/festa-ao-ar-livre-tropical-convidados-ilha-de-bebidas-ao-por-do-sol_w0yqda.webp')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 z-0 hidden md:block bg-[url('https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780350882/festa-ao-ar-livre-tropical-convidados-ilha-de-bebidas-ao-por-do-sol_wqjewg.webp')] bg-cover bg-center"></div>
         {/* Gradient Overlay for 2-column effect */}
         <div className="absolute inset-0 z-0 bg-white/50 md:bg-transparent md:bg-gradient-to-r md:from-white md:via-white/90 md:to-white/10"></div>
         
