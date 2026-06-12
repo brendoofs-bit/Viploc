@@ -347,7 +347,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 drop-shadow-sm">O que dizem nossos clientes</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex md:grid flex-nowrap overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6 -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {[
               {
                 quote: "Aluguei uma geladeira para o evento da empresa e chegou no horário combinado, super limpa. Recomendo demais!",
@@ -374,9 +374,9 @@ export default function Home() {
                 author: "Pedro H."
               }
             ].map((testimony, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <Quote className="text-[#E10600]/20 w-10 h-10 mb-4 fill-current" />
-                <p className="text-gray-700 italic mb-6 leading-relaxed">"{testimony.quote}"</p>
+              <div key={idx} className="w-[85vw] sm:w-[350px] md:w-auto flex-none snap-center md:snap-align-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow h-full flex flex-col">
+                <Quote className="text-[#E10600]/20 w-10 h-10 mb-4 flex-shrink-0 fill-current" />
+                <p className="text-gray-700 italic mb-6 leading-relaxed flex-grow">"{testimony.quote}"</p>
                 <div className="flex items-center justify-between mt-auto">
                   <span className="font-bold text-gray-900">{testimony.author}</span>
                   <div className="flex text-amber-400">
