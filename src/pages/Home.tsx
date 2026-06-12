@@ -39,7 +39,7 @@ export default function Home() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 lg:py-32 flex items-center min-h-[90vh]">
+      <section className="relative overflow-hidden pt-8 pb-20 md:py-24 lg:py-32 flex items-start md:items-center min-h-[85vh] md:min-h-[90vh]">
         {/* Background Image - Mobile only */}
         <div className="absolute inset-0 z-0 block md:hidden bg-[url('https://res.cloudinary.com/dt8fp7f6t/image/upload/v1781217697/pessoas-pepegando-bebidas-em-quiosque-de-praia-com-refri-aberto_shkpnq.webp')] bg-cover bg-center opacity-[0.18]"></div>
         {/* Background Image - Desktop/Tablet */}
