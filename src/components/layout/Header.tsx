@@ -11,15 +11,11 @@ export function Header() {
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
-          <Link to="/" className="flex items-center gap-2">
-            {/* DIMENSION: Logo header: 180x48 */}
-            <img 
-              src="https://res.cloudinary.com/doqw5aqcf/image/upload/v1773599218/viploc_logo_vermelha_ix4lku.png" 
-              alt="Viploc - Locação de Equipamentos" 
-              className="h-10 w-auto object-contain sm:h-12"
-              width={180}
-              height={48}
-            />
+          <Link to="/" className="flex items-center gap-1 group">
+            <div className="flex items-center tracking-tighter">
+              <span className="text-3xl md:text-4xl font-black text-[#E10600] uppercase">VIP</span>
+              <span className="text-3xl md:text-4xl font-black text-gray-900 uppercase group-hover:text-gray-700 transition-colors">LOC</span>
+            </div>
           </Link>
         </div>
 

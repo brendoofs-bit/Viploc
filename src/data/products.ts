@@ -31,7 +31,7 @@ export const products = [
     shortDescription: 'Freezer Horizontal Consul 534 litros de alta capacidade e armazenamento.',
     benefits: ['Amplo espaço interno', 'Alta performance', 'Dupla ação'],
     recommendedUses: ['Grandes eventos', 'Cozinhas industriais', 'Estoque de alimentos'],
-    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Peso': '68,90 KG' }
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '68,90 KG' }
   },
   {
     id: 'freezer-consul-309l',
@@ -48,7 +48,7 @@ export const products = [
     shortDescription: 'Freezer Horizontal Consul 309 litros, compacto e eficiente.',
     benefits: ['Eficiência energética', 'Congelamento rápido', 'Tamanho ideal'],
     recommendedUses: ['Eventos de médio porte', 'Comércio', 'Residencial'],
-    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Peso': '49,50 KG' }
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '49,50 KG' }
   },
   {
     id: 'freezer-vertical-consul-246l',
@@ -65,7 +65,7 @@ export const products = [
     shortDescription: 'Freezer Vertical Consul 246 litros com gavetas, ideal para espaços apertados.',
     benefits: ['Organização em gavetas', 'Otimiza espaço', 'Fácil acesso'],
     recommendedUses: ['Cozinhas', 'Prédios comerciais', 'Eventos corporativos'],
-    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Peso': '49,90 KG' }
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '49,90 KG' }
   },
   {
     id: 'cervejeira-gelopar-570l-pr',
@@ -180,7 +180,7 @@ export const products = [
     shortDescription: 'Frigobar prático Consul 117 litros, ótima armazenagem interna, perfeito para quartos de hotel, Airbnb, reuniões e salas comerciais.',
     benefits: ['Espaço interno amplo', 'Porta latas', 'Gelo rápido'],
     recommendedUses: ['Quartos', 'Stands de feiras', 'Salas executivas'],
-    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Peso': '60,00 KG' }
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '60,00 KG' }
   },
   {
     id: 'purificador-consul-bivolt',
@@ -213,7 +213,7 @@ export const products = [
     shortDescription: 'Geladeira Frost Free Brastemp, resfriamento excelente e amplo espaço.',
     benefits: ['Frost Free Automático', 'Espaço Duplex', 'Refrigeração de ponta'],
     recommendedUses: ['Cozinhas temporárias', 'Eventos esportivos', 'Catering'],
-    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Capacidade': '375 Litros', 'Marca': 'Brastemp' }
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Capacidade': '375 Litros', 'Marca': 'Brastemp' }
   },
   {
     id: 'geladeira-consul-duplex-375l',
@@ -230,7 +230,7 @@ export const products = [
     shortDescription: 'Geladeira Consul Duplex, refrigeração eficiente e divisão interna inteligente.',
     benefits: ['Frost Free Automático', 'Espaço Duplex', 'Praticidade Consul'],
     recommendedUses: ['Cozinhas temporárias', 'Eventos', 'Catering'],
-    specs: { 'Cor': 'Branco', 'Voltagem': 'Sob consulta', 'Capacidade': '375 Litros', 'Marca': 'Consul' }
+    specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Capacidade': '375 Litros', 'Marca': 'Consul' }
   },
   {
     id: 'expositor-gelopar-gptu-40',

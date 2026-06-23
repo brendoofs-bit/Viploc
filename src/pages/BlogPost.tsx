@@ -34,7 +34,7 @@ export default function BlogPost() {
       "name": "Viploc",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://viploc.com.br/images/viploc_logo_vermelha.png"
+        "url": "https://res.cloudinary.com/dt8fp7f6t/image/upload/v1782222274/logo_vip_heunt5-Photoroom_iksrzq.png"
       }
     },
     "datePublished": post.date,
@@ -46,9 +46,7 @@ export default function BlogPost() {
         <title>{post.title} | Blog Viploc</title>
         <meta name="description" content={post.description} />
         <link rel="canonical" href={`https://viploc.com.br/blog/${post.slug}`} />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </Helmet>
 
       {/* Breadcrumbs */}

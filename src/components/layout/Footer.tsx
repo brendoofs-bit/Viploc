@@ -8,15 +8,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4 whitespace-pre-wrap">
           <div className="space-y-4">
-             {/* DIMENSION: Logo footer: 180x48 */}
-            <img 
-              src="https://res.cloudinary.com/doqw5aqcf/image/upload/v1773599218/viploc_logo_branca_z1yvfd.svg" 
-              alt="Viploc" 
-              className="h-10 w-auto"
-              width={180}
-              height={48}
-              loading="lazy"
-            />
+            <div className="flex items-center tracking-tighter">
+              <span className="text-4xl font-black text-[#E10600] uppercase">VIP</span>
+              <span className="text-4xl font-black text-white uppercase">LOC</span>
+            </div>
             <p className="text-sm text-gray-400">
               O melhor custo-benefício em locação de equipamentos de refrigeração e utilidades no Rio de Janeiro. Agilidade e compromisso em primeiro lugar.
             </p>
