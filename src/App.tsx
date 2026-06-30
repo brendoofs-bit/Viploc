@@ -11,11 +11,13 @@ import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import Privacy from '@/pages/Privacy';
 import Terms from '@/pages/Terms';
+import FreezerLandingPage from '@/pages/FreezerLandingPage';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/lp-freezers" element={<FreezerLandingPage />} />
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="locacao/:categorySlug" element={<Category />} />
