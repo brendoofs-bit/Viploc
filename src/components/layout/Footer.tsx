@@ -8,10 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4 whitespace-pre-wrap">
           <div className="space-y-4">
-            <div className="flex items-center tracking-tighter">
-              <span className="text-4xl font-black text-[#E10600] uppercase">VIP</span>
-              <span className="text-4xl font-black text-white uppercase">LOC</span>
-            </div>
+            <img src="https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780350671/viploc_logo_vermelha_pzzth2.png" alt="Viploc" className="h-12 w-auto object-contain" />
             <p className="text-sm text-gray-400">
               O melhor custo-benefício em locação de equipamentos de refrigeração e utilidades no Rio de Janeiro. Agilidade e compromisso em primeiro lugar.
             </p>

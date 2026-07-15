@@ -12,10 +12,7 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-1 group">
-            <div className="flex items-center tracking-tighter">
-              <span className="text-3xl md:text-4xl font-black text-[#E10600] uppercase">VIP</span>
-              <span className="text-3xl md:text-4xl font-black text-gray-900 uppercase group-hover:text-gray-700 transition-colors">LOC</span>
-            </div>
+            <img src="https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780350671/viploc_logo_vermelha_pzzth2.png" alt="Viploc" className="h-10 md:h-12 w-auto object-contain" />
           </Link>
         </div>
 

@@ -17,6 +17,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/lp/freezers" element={<FreezerLandingPage />} />
         <Route path="/lp-freezers" element={<FreezerLandingPage />} />
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
