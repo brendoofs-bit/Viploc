@@ -202,20 +202,16 @@ export default function FreezerLandingPage() {
       {/* 3. Barra de estatísticas */}
       <div className="bg-white border-y border-gray-100 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
-            <div>
-              <p className="text-3xl sm:text-4xl font-black text-[#E10600] mb-1">+8 anos</p>
-              <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">NO MERCADO CARIOCA</p>
-            </div>
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+            <div className="pt-4 sm:pt-0">
               <p className="text-3xl sm:text-4xl font-black text-[#E10600] mb-1">+2.500</p>
               <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">EVENTOS ATENDIDOS</p>
             </div>
-            <div>
+            <div className="pt-8 sm:pt-0">
               <p className="text-3xl sm:text-4xl font-black text-[#E10600] mb-1">24h</p>
               <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">PARA ENTREGAR</p>
             </div>
-            <div>
+            <div className="pt-8 sm:pt-0">
               <p className="text-3xl sm:text-4xl font-black text-[#E10600] mb-1">4,9<Star className="inline w-5 h-5 sm:w-6 sm:h-6 ml-1 -mt-1 fill-current" /></p>
               <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">AVALIAÇÃO MÉDIA</p>
             </div>
