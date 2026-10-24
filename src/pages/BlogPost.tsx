@@ -6,6 +6,7 @@ import { DEFAULT_OG_IMAGE, LOGO_URL, SITE_NAME, SITE_URL } from '@/data/site';
 import NotFound from '@/pages/NotFound';
 import { blogPosts } from '@/data/blogPosts';
 import Markdown from 'react-markdown';
+import { markdownLinkComponents } from '@/components/content/RichText';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Calendar, ChevronRight } from 'lucide-react';
@@ -43,6 +44,7 @@ export default function BlogPost() {
       }
     },
     "datePublished": post.date,
+    "dateModified": post.updated ?? post.date,
     "inLanguage": "pt-BR",
   };
 
@@ -78,8 +80,9 @@ export default function BlogPost() {
            <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
               {post.title}
            </h1>
-           <div className="flex items-center justify-center gap-6 text-gray-500 text-sm">
+           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-gray-500 text-sm">
               <span className="flex items-center gap-2"><Calendar size={16} /> Publicado em {new Date(post.date).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}</span>
+              {post.updated && <span>Atualizado em {new Date(post.updated).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}</span>}
               <span>Por Equipe Viploc</span>
            </div>
         </header>
@@ -100,7 +103,7 @@ export default function BlogPost() {
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
            <div className="prose prose-lg prose-red max-w-none text-gray-700">
-              <Markdown>{post.content}</Markdown>
+              <Markdown components={markdownLinkComponents}>{post.content}</Markdown>
            </div>
 
            {/* Tags */}

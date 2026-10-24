@@ -48,7 +48,7 @@ export function getSiteRoutes(): SiteRoute[] {
   });
 
   blogPosts.forEach(post => {
-    routes.push({ path: `/blog/${post.slug}`, indexable: true, priority: 0.6, lastmod: post.date });
+    routes.push({ path: `/blog/${post.slug}`, indexable: true, priority: 0.6, lastmod: post.updated ?? post.date });
   });
 
   return routes;

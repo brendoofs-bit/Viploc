@@ -7,7 +7,8 @@ export function Button({
   variant = 'primary', 
   className = '',
   isWhatsApp = false,
-  whatsappMessage = defaultWhatsAppMessage
+  whatsappMessage = defaultWhatsAppMessage,
+  as = 'button'
 }: { 
   children: ReactNode; 
   href?: string; 
@@ -15,6 +16,8 @@ export function Button({
   className?: string;
   isWhatsApp?: boolean;
   whatsappMessage?: string;
+  // "span" para usar o visual do botão dentro de um link (ex.: card inteiro clicável).
+  as?: 'button' | 'span';
 }) {
   const baseStyles = "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 ease-out px-8 py-3.5 text-sm md:text-base";
   
@@ -40,6 +43,10 @@ export function Button({
         {children}
       </a>
     );
+  }
+
+  if (as === 'span') {
+    return <span className={`${baseStyles} ${variantStyles} ${className}`}>{children}</span>;
   }
 
   return (
