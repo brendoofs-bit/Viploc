@@ -88,8 +88,8 @@ const PRODUCTS = [
 ];
 
 const FAQS = [
-  { q: "Qual o prazo mínimo de locação?", a: "Atendemos desde diárias para o final de semana até contratos mensais para o seu negócio." },
-  { q: "Vocês entregam em toda a cidade?", a: "Sim, entregamos em toda a cidade do Rio de Janeiro e principais municípios da Baixada. Consulte a taxa pelo WhatsApp." },
+  { q: "Qual o prazo mínimo de locação?", a: "A partir de 1 diária. Também fazemos locações por semana ou contratos mensais para o seu negócio." },
+  { q: "Vocês entregam em toda a cidade?", a: "Sim, entregamos em toda a cidade do Rio de Janeiro (capital). O orçamento já vem com o valor final, com entrega e retirada incluídas; o valor varia conforme o bairro." },
   { q: "Como funciona o pagamento?", a: "O pagamento pode ser feito via PIX, cartão de crédito ou dinheiro no ato da entrega." },
   { q: "Precisa pagar caução?", a: "Trabalhamos sem burocracia e, na maioria dos casos, não exigimos caução. Consulte as condições para locações mais longas." },
   { q: "E se o freezer der problema durante o uso?", a: "Temos suporte técnico rápido. Caso não seja possível reparar no local, efetuamos a troca do equipamento imediatamente." },
@@ -170,7 +170,7 @@ export default function FreezerLandingPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm text-gray-600 font-medium max-w-lg mx-auto lg:mx-0">
-                <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#E10600]" /> Frete rápido em todo o RJ</div>
+                <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#E10600]" /> Entrega em toda a cidade do Rio</div>
                 <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#E10600]" /> Freezers revisados 100%</div>
                 <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#E10600]" /> Diária, semana ou mês</div>
                 <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#E10600]" /> PIX, cartão ou dinheiro</div>
@@ -210,8 +210,8 @@ export default function FreezerLandingPage() {
               <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">EVENTOS ATENDIDOS</p>
             </div>
             <div className="pt-8 sm:pt-0">
-              <p className="text-3xl sm:text-4xl font-black text-[#E10600] mb-1">24h</p>
-              <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">PARA ENTREGAR</p>
+              <p className="text-3xl sm:text-4xl font-black text-[#E10600] mb-1">Mesmo dia</p>
+              <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">ENTREGA, SE HOUVER DISPONIBILIDADE</p>
             </div>
             <div className="pt-8 sm:pt-0">
               <p className="text-3xl sm:text-4xl font-black text-[#E10600] mb-1">4,9<Star className="inline w-5 h-5 sm:w-6 sm:h-6 ml-1 -mt-1 fill-current" /></p>
@@ -282,7 +282,7 @@ export default function FreezerLandingPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-[#E10600] shrink-0 mt-0.5" />
-                  <span>Frete justo pra toda a cidade e Baixada</span>
+                  <span>Frete justo pra toda a cidade do Rio</span>
                 </li>
               </ul>
             </div>
@@ -303,7 +303,7 @@ export default function FreezerLandingPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { num: "01", icon: Zap, title: "Melhor preço do RJ", desc: "A gente cobre orçamento, mostre o da concorrência." },
-              { num: "02", icon: Truck, title: "Entrega em até 24h", desc: "Pedido hoje, freezer na sua porta amanhã cedo." },
+              { num: "02", icon: Truck, title: "Entrega no mesmo dia", desc: "Pediu cedo e tem freezer disponível? Ele chega na sua porta no mesmo dia." },
               { num: "03", icon: Snowflake, title: "Gela de verdade", desc: "Freezers testados a cada devolução. Zero improviso." },
               { num: "04", icon: MessageCircle, title: "Suporte durante o uso", desc: "Deu problema? Trocamos o equipamento na hora." }
             ].map((item, idx) => (
@@ -575,7 +575,7 @@ export default function FreezerLandingPage() {
             <div>
               <p className="font-bold text-gray-900 text-sm uppercase tracking-wider mb-4">ÁREA DE ATUAÇÃO</p>
               <p className="text-xs text-gray-500 leading-relaxed max-w-xs mx-auto md:mx-0">
-                Rio de Janeiro capital, Baixada Fluminense, Niterói, São Gonçalo e Região dos Lagos.
+                Toda a cidade do Rio de Janeiro: Zona Sul, Zona Norte, Zona Oeste e Centro.
               </p>
             </div>
             <div>

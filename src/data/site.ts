@@ -18,7 +18,6 @@ export const AREA_SERVED = [
   'Zona Norte do Rio de Janeiro',
   'Zona Oeste do Rio de Janeiro',
   'Centro do Rio de Janeiro',
-  'Grande Rio',
 ];
 
 export const absoluteUrl = (path: string) => (path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`);
