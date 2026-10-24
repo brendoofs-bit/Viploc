@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Seo } from '@/components/seo/Seo';
-import { blogPosts } from '@/data/blogPosts';
+import { blogPosts, readingMinutes } from '@/data/blogPosts';
 import { Badge } from '@/components/ui/Badge';
 import { Calendar, Clock } from 'lucide-react';
 
@@ -35,11 +35,11 @@ export default function BlogList() {
                   className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:border-red-100 transition-all flex flex-col"
                >
                   {/* DIMENSION Hero blog thumb: 1600x900 */}
-                  <div className="aspect-[16/9] bg-gray-100 relative overflow-hidden flex items-center justify-center p-4">
+                  <div className="aspect-[16/9] bg-gray-100 relative overflow-hidden">
                      <img 
-                        src="https://images.unsplash.com/photo-1498837167922-c779afa0fc11?w=800&auto=format&fit=crop" 
-                        alt={post.title} 
-                        className="object-cover w-full h-full mix-blend-multiply opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 rounded" 
+                        src={post.image.src}
+                        alt={post.image.alt} 
+                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" 
                         loading="lazy" 
                         width={800} 
                         height={450} 
@@ -52,7 +52,7 @@ export default function BlogList() {
                   <div className="p-6 flex-grow flex flex-col">
                      <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
                         <span className="flex items-center gap-1"><Calendar size={14} /> {new Date(post.date).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}</span>
-                        <span className="flex items-center gap-1"><Clock size={14} /> 3 min leitura</span>
+                        <span className="flex items-center gap-1"><Clock size={14} /> {readingMinutes(post.content)} min de leitura</span>
                      </div>
                      <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#E10600] transition-colors">{post.title}</h2>
                      <p className="text-gray-600 text-sm mb-6 flex-grow line-clamp-3">{post.description}</p>

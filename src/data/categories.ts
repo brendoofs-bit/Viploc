@@ -1,4 +1,5 @@
 // singularName/keyword alimentam títulos e descrições de SEO ("aluguel de geladeira", "locação de freezer"...).
+// related: categorias complementares, usadas em "Veja também" e nos produtos relacionados.
 export const categories = [
   {
     id: 'geladeiras',
@@ -9,6 +10,7 @@ export const categories = [
     description: 'Locação de geladeiras de alta capacidade para eventos e uso profissional.',
     icon: 'Refrigerator',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-geladeiras-viploc_dso1sc.png',
+    related: ['freezers', 'frigobar', 'cervejeiras'],
   },
   {
     id: 'freezers',
@@ -19,6 +21,7 @@ export const categories = [
     description: 'Locação de freezers verticais e horizontais para congelamento rápido e eficiente.',
     icon: 'Wind',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-freezer-viploc_jqndgw.png',
+    related: ['cervejeiras', 'geladeiras', 'expositores-de-bebidas'],
   },
   {
     id: 'frigobar',
@@ -29,6 +32,7 @@ export const categories = [
     description: 'Compactos e práticos para quartos de hotel, escritórios e pequenos espaços.',
     icon: 'Archive',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-frigobar-viploc_hohtrd.png',
+    related: ['geladeiras', 'micro-ondas', 'purificador-de-agua'],
   },
   {
     id: 'expositores-de-bebidas',
@@ -39,6 +43,7 @@ export const categories = [
     description: 'Mostre seus produtos e mantenha as bebidas na temperatura ideal.',
     icon: 'GlassWater',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-expositor-bebidas-viploc_bbwl6y.png',
+    related: ['cervejeiras', 'freezers', 'geladeiras'],
   },
   {
     id: 'cervejeiras',
@@ -49,6 +54,7 @@ export const categories = [
     description: 'Cervejas extremamente geladas para seus eventos e estabelecimentos.',
     icon: 'Beer',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-cervejeira-viploc_vgqnow.png',
+    related: ['freezers', 'expositores-de-bebidas', 'geladeiras'],
   },
   {
     id: 'purificador-de-agua',
@@ -59,6 +65,7 @@ export const categories = [
     description: 'Água pura e na temperatura ideal para seus convidados ou equipe.',
     icon: 'Droplets',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-purificador-agua-viploc_ambwtv.png',
+    related: ['geladeiras', 'frigobar', 'micro-ondas'],
   },
   {
     id: 'micro-ondas',
@@ -69,6 +76,7 @@ export const categories = [
     description: 'Micro-ondas de diversas capacidades para aquecimento rápido.',
     icon: 'Microwave', // Might be an issue if Microwave doesn't exist, I should check. Let's use 'Waves' or 'Zap' if necessary, but leaving as is for now.
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-microondas-viploc_pqjqrl.png',
+    related: ['frigobar', 'geladeiras', 'purificador-de-agua'],
   },
   {
     id: 'tv',
@@ -79,6 +87,7 @@ export const categories = [
     description: 'Smart TVs 4K para apresentações, eventos e entretenimento.',
     icon: 'Monitor',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-tv-viploc_e1xpok.png',
+    related: ['frigobar', 'micro-ondas', 'purificador-de-agua'],
   },
 ];
 

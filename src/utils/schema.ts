@@ -69,6 +69,9 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
   };
 }
 
+// Remove a marcação Markdown (links e negrito) usada nos textos visíveis.
+const plainText = (text: string) => text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*/g, '');
+
 export function faqSchema(faqs: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',
@@ -76,7 +79,7 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
     mainEntity: faqs.map(faq => ({
       '@type': 'Question',
       name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      acceptedAnswer: { '@type': 'Answer', text: plainText(faq.answer) },
     })),
   };
 }

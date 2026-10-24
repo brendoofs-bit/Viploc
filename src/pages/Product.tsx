@@ -11,79 +11,8 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { faqSchema, productServiceSchema } from '@/utils/schema';
 import NotFound from '@/pages/NotFound';
-
-// Advanced SEO & Local GEO Data mapping per product. 
-// Fully editable list of curated texts that dynamically populates on need.
-const PRODUCT_SEO_DATA: Record<string, {
-  customH1?: string;
-  idealForTitle?: string;
-  idealForSubtitle?: string;
-  idealForList?: string[];
-  applicationsTitle?: string;
-  applicationsIntro?: string;
-  applicationsList?: string[];
-  comparativeTitle?: string;
-  comparativeSubtitle?: string;
-  comparativeHeaders?: string[];
-  comparativeRows?: { situation: string; mainProd: string; compProd: string }[];
-  faqs?: { question: string; answer: string }[];
-}> = {
-  'geladeira-frost-free-brastemp-375l': {
-    customH1: "Locação de Geladeira Frost Free Brastemp 375L no Rio de Janeiro",
-    idealForTitle: "Ideal para",
-    idealForSubtitle: "Esta geladeira é indicada para os seguintes locais e ocasiões:",
-    idealForList: [
-      "Festas particulares",
-      "Eventos corporativos",
-      "Casamentos",
-      "Food trucks",
-      "Restaurantes",
-      "Bares",
-      "Quiosques",
-      "Produções de TV",
-      "Feiras",
-      "Stands promocionais"
-    ],
-    applicationsTitle: "Aplicações Reais",
-    applicationsIntro: "Onde esta geladeira de 375 litros da Brastemp é frequentemente utilizada?",
-    applicationsList: [
-      "Eventos no Rio de Janeiro",
-      "Casas de temporada",
-      "Reformas residenciais na cozinha",
-      "Substituição temporária de equipamentos quebrados",
-      "Restaurantes, lanchonetes e bares",
-      "Produções audiovisuais e cenografia"
-    ],
-    comparativeTitle: "Comparativo de Soluções",
-    comparativeSubtitle: "Geladeira 375L ou um Frigobar?",
-    comparativeHeaders: ["Situação", "Geladeira Brastemp 375L", "Frigobar Convencional"],
-    comparativeRows: [
-      { situation: "Espaço para Eventos", mainProd: "✅ Perfeito", compProd: "❌ Insuficiente" },
-      { situation: "Uso em Casa Temporária", mainProd: "✅ Completo", compProd: "⚠️ Apenas quebra-galho" },
-      { situation: "Armazenamento de Bebidas", mainProd: "✅ Alta Capacidade", compProd: "✅ Baixa Capacidade" }
-    ],
-    faqs: [
-      { question: "Como funciona a locação de geladeira Brastemp 375L no Rio de Janeiro?", answer: "A locação é simples e totalmente sem complicação. Você escolhe o período necessário (diário, semanal ou mensal), entra em contato com nossa equipe via WhatsApp para fechar os detalhes, e nós cuidamos da entrega, instalação inicial e retirada direto no local informado no RJ." },
-      { question: "Qual é a voltagem da Geladeira Brastemp 375L disponível para aluguel?", answer: "Todos os nossos equipamentos estão prontos para uso em 220V, garantindo alta eficiência de refrigeração e estabilidade mesmo em dias quentes de verão no Rio de Janeiro." },
-      { question: "A entrega e retirada da geladeira estão inclusas no valor da locação?", answer: "A entrega e retirada são agendadas previamente conforme o contrato. O valor do transporte varia conforme o bairro ou região do RJ e é informado de forma transparente no momento do orçamento de aluguel." },
-      { question: "Quais são os prazos de entrega para os bairros do Rio de Janeiro?", answer: "Temos uma logística ágil no RJ. Geralmente, as entregas são feitas em até 24 ou 48 horas úteis, ou na data específica agendada para o seu evento ou reforma." },
-      { question: "A geladeira é devidamente limpa e higienizada antes da entrega?", answer: "Sim! Todos os equipamentos da Viploc passam por um rigoroso processo de higienização profissional e testes técnicos de funcionamento antes de serem enviados a qualquer cliente." },
-      { question: "Como proceder se a geladeira apresentar alguma falha de funcionamento durante a locação?", answer: "Contamos com um serviço de suporte técnico ágil e humano via WhatsApp. Caso qualquer inconsistência ocorra, nossa equipe realiza o atendimento e, se necessário, efetuamos a substituição rápida do aparelho." },
-      { question: "Vocês atendem festas e eventos particulares em residências ou salões?", answer: "Sim, atendemos de pequenos encontros familiares e casamentos até grandes festas corporativas, shows e produções de grande porte na capital e Grande Rio." },
-      { question: "Posso alugar a geladeira Brastemp 375L para o período de reforma da minha cozinha?", answer: "Com certeza! Essa é uma das aplicações mais comuns. Oferecemos pacotes mensais flexíveis para garantir que a sua rotina doméstica não pare enquanto sua cozinha é reformada." },
-      { question: "Quais as vantagens de alugar uma geladeira de 375 litros em comparação com um frigobar?", answer: "A geladeira de 375L oferece amplo espaço interno, congelador/freezer de verdade e prateleiras ajustáveis, ideal para armazenar alimentos de refeições completas, bolos, pratos congelados e grandes garrafas que não caberiam em um frigobar convencional." },
-      { question: "A tecnologia Frost Free faz diferença no aluguel comercial ou residencial temporário?", answer: "Sim! Como é Frost Free, ela não acumula gelo nas paredes internas do congelador. Isso evita o incômodo de precisar desligar e descongelar o aparelho, garantindo operação constante e sem poças de água." },
-      { question: "Qual é o período mínimo que posso contratar o aluguel?", answer: "Trabalhamos com flexibilidade de prazos. Alugamos para diárias de eventos, períodos de finais de semana ou pacotes mensais para obras ou uso residencial prolongado." },
-      { question: "A geladeira Brastemp 375L passa facilmente em portas e elevadores padrão?", answer: "Sim, com tamanho equilibrado e design duplex compacto, ela passa bem na maioria das portas residenciais, elevadores de prédios no Rio de Janeiro e corredores de acesso." },
-      { question: "É necessário deixar algum valor de caução para a locação do equipamento?", answer: "Não exigimos burocracia excessiva ou cauções complexas. A análise é rápida e transparente, focada na comodidade do cliente." },
-      { question: "Quais são os cuidados básicos recomendados após ligar o equipamento?", answer: "Recomendamos aguardar cerca de 2 horas após o transporte antes de ligar a geladeira na tomada de 220V, permitindo que os fluidos internos se estabilizem corretamente antes de iniciar o resfriamento máximo." },
-      { question: "Vocês emitem nota fiscal e contrato para empresas (Pessoa Jurídica)?", answer: "Sim! Atendemos demandas corporativas fornecendo toda a documentação fiscal e contratual necessária para o faturamento interno das empresas." },
-      { question: "A geladeira pode ser transportada pela nossa equipe ou vocês fazem todo o frete?", answer: "Para garantir a perfeita integridade física e mecânica dos sistemas de refrigeração, o transporte é efetuado de forma exclusiva pela expedição própria da Viploc." },
-      { question: "O que está incluso na garantia de suporte técnico da locação?", answer: "Qualquer manutenção preventiva, corretiva ou substituição por desgaste natural está totalmente coberta sem custos adicionais ao longo do tempo do seu contrato." },
-      { question: "Como faço para solicitar a cotação rápida da geladeira Brastemp 375L?", answer: "Basta clicar em qualquer botão de orçamento por WhatsApp da página e você falará em minutos com um consultor comercial pronto para passar valores sob medida." }
-    ]
-  }
-};
+import { productContent } from '@/data/productContent';
+import { RelatedProducts } from '@/components/catalog/RelatedProducts';
 
 export default function Product() {
   const { categorySlug, productSlug } = useParams<{ categorySlug: string, productSlug: string }>();
@@ -104,7 +33,7 @@ export default function Product() {
   const [mainImage, setMainImage] = useState(defaultImage);
 
   // Dynamic template fallback generation for non-configured products so everything automatically works
-  const seo = (product ? (PRODUCT_SEO_DATA[product.id] || PRODUCT_SEO_DATA[product.slug]) : null) || {
+  const seo = (product ? productContent[product.id] : null) || {
     customH1: product ? `Locação de ${product.name} no Rio de Janeiro` : '',
     idealForTitle: "Ideal para",
     idealForSubtitle: "Este equipamento é excelente para os seguintes usos e ocasiões:",
@@ -120,7 +49,7 @@ export default function Product() {
     applicationsTitle: "Aplicações Reais",
     applicationsIntro: "Descubra os cenários comuns onde este produto faz total diferença:",
     applicationsList: [
-      "Eventos na capital do Rio de Janeiro e Grande Rio",
+      "Eventos em toda a cidade do Rio de Janeiro",
       "Stands comerciais e congressos empresariais",
       "Substituição temporária de equipamentos parados",
       "Reformas residenciais prolongadas",
@@ -137,9 +66,9 @@ export default function Product() {
     ],
     faqs: product ? [
       { question: `Como funciona a locação de ${product.name} no Rio de Janeiro?`, answer: `A locação do ${product.name} é totalmente simplificada. Após definir as datas desejadas, entre em contato via WhatsApp e nós entregamos, testamos de forma segura e retiramos o produto em qualquer bairro atendido do Rio de Janeiro.` },
-      { question: `O ${product.name} está disponível em qual voltagem?`, answer: `Todos os nossos aparelhos em catálogo, incluindo o ${product.name}, estão disponíveis em 220v para excelente estabilidade de desempenho térmico e eficiência.` },
+      { question: `O ${product.name} está disponível em qual voltagem?`, answer: product.specs['Voltagem'] === 'Bivolt' ? `O ${product.name} é bivolt: funciona em tomadas 127V ou 220V.` : `O ${product.name} funciona em ${product.specs['Voltagem']}. Confira se o local tem tomada ${product.specs['Voltagem']} antes da entrega.` },
       { question: `A higienização do ${product.name} é feita antes da entrega?`, answer: `Com certeza absoluta. Cada item passa por higienização profissional rigorosa e revisão funcional completa antes de chegar até você.` },
-      { question: `Qual é o prazo mínimo de locação oferecido?`, answer: `Temos flexibilidade sob medida: atendemos locações diárias para eventos rápidos, semanais ou planos mensais recorrentes.` }
+      { question: `Qual é o prazo mínimo de locação oferecido?`, answer: `A partir de 1 diária. Também alugamos por semana ou por mês.` }
     ] : []
   };
 
@@ -237,7 +166,7 @@ export default function Product() {
                   <Button variant="whatsapp" isWhatsApp={true} whatsappMessage={wppMessage} className="w-full text-lg py-4 shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.23)] hover:bg-[#20b958] transition-all duration-200">
                      Consultar Preços e Prazos
                   </Button>
-                  <p className="text-xs text-center text-gray-400 mt-4">* Atendemos preferencialmente Rio de Janeiro e Grande Rio.</p>
+                  <p className="text-xs text-center text-gray-400 mt-4">* Atendemos toda a cidade do Rio de Janeiro.</p>
                </div>
 
                {/* Benefícios */}
@@ -405,6 +334,8 @@ export default function Product() {
             </div>
          </div>
       </section>
+
+      <RelatedProducts product={product} category={category} />
 
       {/* Seção 7: Cobertura de Entrega */}
       <section className="py-16 md:py-20 bg-white border-t border-gray-100">
