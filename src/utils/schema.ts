@@ -1,4 +1,4 @@
-import { absoluteUrl, AREA_SERVED, DEFAULT_OG_IMAGE, LOGO_URL, PHONE_E164, SAME_AS, SITE_NAME, SITE_URL } from '@/data/site';
+import { absoluteUrl, AREA_SERVED, DEFAULT_OG_IMAGE, GOOGLE_BUSINESS_URL, LOGO_URL, PHONE_E164, SAME_AS, SITE_NAME, SITE_URL } from '@/data/site';
 import { categoryPath, getProductUrlPath } from '@/data/routes';
 import type { Category } from '@/data/categories';
 import type { Product } from '@/data/products';
@@ -32,6 +32,7 @@ export function siteSchema() {
           addressCountry: 'BR',
         },
         areaServed,
+        hasMap: GOOGLE_BUSINESS_URL,
         contactPoint: {
           '@type': 'ContactPoint',
           telephone: PHONE_E164,

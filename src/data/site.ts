@@ -7,8 +7,10 @@ export const PHONE_E164 = '+55-21-99160-5699';
 export const LOGO_URL = 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780350671/viploc_logo_vermelha_pzzth2.png';
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
 
-// Perfis oficiais (Google Business Profile, Instagram, Facebook...). Preencher com as URLs reais.
-export const SAME_AS: string[] = [];
+// Perfis oficiais: usados no rodapé e no "sameAs" do schema LocalBusiness.
+export const GOOGLE_BUSINESS_URL = 'https://share.google/bNPCkReztG5JPaa48';
+export const INSTAGRAM_URL = 'https://www.instagram.com/viploc_/';
+export const SAME_AS: string[] = [GOOGLE_BUSINESS_URL, INSTAGRAM_URL];
 
 export const AREA_SERVED = [
   'Rio de Janeiro',
