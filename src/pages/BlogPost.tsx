@@ -1,5 +1,9 @@
-import { useParams, Navigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { useParams, Link } from 'react-router-dom';
+import { Seo } from '@/components/seo/Seo';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { breadcrumbSchema, BUSINESS_ID } from '@/utils/schema';
+import { DEFAULT_OG_IMAGE, LOGO_URL, SITE_NAME, SITE_URL } from '@/data/site';
+import NotFound from '@/pages/NotFound';
 import { blogPosts } from '@/data/blogPosts';
 import Markdown from 'react-markdown';
 import { Button } from '@/components/ui/Button';
@@ -12,7 +16,7 @@ export default function BlogPost() {
   const post = blogPosts.find(p => p.slug === postSlug);
   
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <NotFound />;
   }
 
   const structuredData = {
@@ -20,34 +24,42 @@ export default function BlogPost() {
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://viploc.com.br/blog/${post.slug}`
+      "@id": `${SITE_URL}/blog/${post.slug}`
     },
     "headline": post.title,
     "description": post.description,
-    "image": "https://viploc.com.br/images/og-default.jpg",  
+    "image": DEFAULT_OG_IMAGE,
     "author": {
       "@type": "Organization",
       "name": "Equipe Viploc"
     },  
     "publisher": {
       "@type": "Organization",
-      "name": "Viploc",
+      "@id": BUSINESS_ID,
+      "name": SITE_NAME,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://res.cloudinary.com/dt8fp7f6t/image/upload/v1782222274/logo_vip_heunt5-Photoroom_iksrzq.png"
+        "url": LOGO_URL
       }
     },
     "datePublished": post.date,
+    "inLanguage": "pt-BR",
   };
 
   return (
     <>
-      <Helmet>
-        <title>{post.title} | Blog Viploc</title>
-        <meta name="description" content={post.description} />
-        <link rel="canonical" href={`https://viploc.com.br/blog/${post.slug}`} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      </Helmet>
+      <Seo
+        title={`${post.title} | Blog Viploc`}
+        description={post.description}
+        path={`/blog/${post.slug}`}
+        type="article"
+      />
+      <JsonLd data={structuredData} />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Blog', path: '/blog' },
+        { name: post.title, path: `/blog/${post.slug}` },
+      ])} />
 
       {/* Breadcrumbs */}
       <div className="bg-white border-b border-gray-100 py-4 text-sm sticky top-20 z-30">
@@ -67,7 +79,7 @@ export default function BlogPost() {
               {post.title}
            </h1>
            <div className="flex items-center justify-center gap-6 text-gray-500 text-sm">
-              <span className="flex items-center gap-2"><Calendar size={16} /> Publicado em {new Date(post.date).toLocaleDateString('pt-BR')}</span>
+              <span className="flex items-center gap-2"><Calendar size={16} /> Publicado em {new Date(post.date).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}</span>
               <span>Por Equipe Viploc</span>
            </div>
         </header>

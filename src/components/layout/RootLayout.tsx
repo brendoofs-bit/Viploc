@@ -4,6 +4,8 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { StickyCTA } from './StickyCTA';
 import Lenis from 'lenis';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { siteSchema } from '@/utils/schema';
 
 export default function RootLayout() {
   const { pathname } = useLocation();
@@ -46,6 +48,7 @@ export default function RootLayout() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-gray-900 font-sans selection:bg-red-100 selection:text-[#E10600]">
+      <JsonLd data={siteSchema()} />
       <Header />
       <main className="flex-grow flex flex-col w-full">
         <Outlet />

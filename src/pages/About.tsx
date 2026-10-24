@@ -1,15 +1,15 @@
-import { Helmet } from 'react-helmet-async';
+import { Seo } from '@/components/seo/Seo';
 import { Button } from '@/components/ui/Button';
 import { ShieldCheck, Target, Zap } from 'lucide-react';
 
 export default function About() {
   return (
     <>
-      <Helmet>
-        <title>Sobre Nós | Viploc Locação de Equipamentos no RJ</title>
-        <meta name="description" content="Conheça a história da Viploc. Dedicados a oferecer o melhor custo-benefício em locação de equipamentos de refrigeração no Rio de Janeiro." />
-        <link rel="canonical" href="https://viploc.com.br/sobre" />
-      </Helmet>
+      <Seo
+        title="Sobre Nós | Viploc Locação de Equipamentos no RJ"
+        description="Conheça a história da Viploc. Dedicados a oferecer o melhor custo-benefício em locação de equipamentos de refrigeração no Rio de Janeiro."
+        path="/sobre"
+      />
 
       <section className="bg-gray-50 py-16 text-center border-b border-gray-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

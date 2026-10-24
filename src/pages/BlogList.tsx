@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Seo } from '@/components/seo/Seo';
 import { blogPosts } from '@/data/blogPosts';
 import { Badge } from '@/components/ui/Badge';
 import { Calendar, Clock } from 'lucide-react';
@@ -7,11 +7,11 @@ import { Calendar, Clock } from 'lucide-react';
 export default function BlogList() {
   return (
     <>
-      <Helmet>
-        <title>Blog | Dicas de Locação e Eventos no RJ | Viploc</title>
-        <meta name="description" content="Tudo o que você precisa saber sobre locação de equipamentos de refrigeração no RJ, organização de festas e economia garantida." />
-        <link rel="canonical" href="https://viploc.com.br/blog" />
-      </Helmet>
+      <Seo
+        title="Blog | Dicas de Locação e Eventos no RJ | Viploc"
+        description="Tudo o que você precisa saber sobre locação de equipamentos de refrigeração no RJ, organização de festas e economia garantida."
+        path="/blog"
+      />
 
       <section className="bg-gray-50 py-16 text-center border-b border-gray-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -51,7 +51,7 @@ export default function BlogList() {
 
                   <div className="p-6 flex-grow flex flex-col">
                      <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
-                        <span className="flex items-center gap-1"><Calendar size={14} /> {new Date(post.date).toLocaleDateString('pt-BR')}</span>
+                        <span className="flex items-center gap-1"><Calendar size={14} /> {new Date(post.date).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}</span>
                         <span className="flex items-center gap-1"><Clock size={14} /> 3 min leitura</span>
                      </div>
                      <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#E10600] transition-colors">{post.title}</h2>

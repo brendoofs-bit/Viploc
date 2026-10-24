@@ -151,7 +151,7 @@ export const products = [
   },
   {
     id: 'freezer-vidro-292l',
-    name: 'Freezer Metalfrio 292L Tampa de Vidro ',
+    name: 'Freezer Metalfrio 292L Tampa de Vidro',
     categoryId: 'freezers',
     slug: 'freezer-horizontal-vidro-292l-metalfrio',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780359665/maquina-de-corte-e-aquecimento-com-tampa-transparente-branca-cinza_lc4a04.webp',
@@ -267,7 +267,7 @@ export const products = [
   },
   {
     id: 'midea-flex-96l',
-    name: 'Midea Flex 96L',
+    name: 'Expositor de Bebidas Midea Flex 96L',
     categoryId: 'expositores-de-bebidas',
     slug: 'expositora-midea-flex-96l',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780362088/adega-eletrica-midea-preta-com-vidro-e-prateleiras_cjse2p.webp',
@@ -284,7 +284,7 @@ export const products = [
   },
   {
     id: 'micro-ondas-electrolux-34l',
-    name: 'Micro-ondas Electrolux 34 Litros.',
+    name: 'Micro-ondas Electrolux 34 Litros',
     categoryId: 'micro-ondas',
     slug: 'micro-ondas-electrolux-34l-meo44',
     image: 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780368912/microondas-electrolux-com-painel-digital-display-azul_trirdb.webp',
@@ -299,3 +299,5 @@ export const products = [
     specs: { 'Cor': 'Branco', 'Voltagem': '220V', 'Peso': '16,00 KG' }
   }
 ];
+
+export type Product = (typeof products)[number];

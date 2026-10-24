@@ -1,0 +1,13 @@
+# Redirecionamentos 301 (formato aceito por Netlify e Cloudflare Pages).
+# Não adicionar fallback de SPA ("/* /index.html 200"): todas as rotas são pré-renderizadas
+# e URLs inexistentes devem responder 404 com o 404.html.
+
+# URL antiga da landing page de freezers
+/lp-freezers  /lp/freezers  301
+
+# URLs de produto que constavam no sitemap antigo e nunca existiram
+/locacao/geladeiras/geladeira-375l-brastemp      /locacao/geladeiras/geladeira-frost-free-brastemp-375l  301
+/locacao/cervejeiras/cervejeira-gelopar-410l     /locacao/cervejeiras/cervejeira-gelopar-410l-grba400    301
+/locacao/freezers/freezer-horizontal-consul-534l /locacao/freezers/freezer-consul-534l-chb53eb           301
+/locacao/micro-ondas/micro-ondas-electrolux-34l  /locacao/micro-ondas/micro-ondas-electrolux-34l-meo44   301
+/locacao/tv/tv-4k-android                        /locacao/tv                                             301

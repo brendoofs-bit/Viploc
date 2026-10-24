@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { Instagram, Star } from 'lucide-react';
 import { categories } from '@/data/categories';
 import { locations } from '@/data/locations';
+import { GOOGLE_BUSINESS_URL, INSTAGRAM_URL } from '@/data/site';
 
 export function Footer() {
   return (
@@ -47,6 +49,14 @@ export function Footer() {
               <li>WhatsApp: (21) 99160-5699</li>
               <li>Área de atuação: Rio de Janeiro - RJ</li>
             </ul>
+            <div className="mt-6 flex flex-col gap-2 text-sm">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                <Instagram className="h-4 w-4" /> Instagram @viploc_
+              </a>
+              <a href={GOOGLE_BUSINESS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                <Star className="h-4 w-4" /> Avaliações no Google
+              </a>
+            </div>
             <div className="mt-6 flex space-x-4">
               <Link to="/sobre" className="hover:text-white transition-colors text-sm">Sobre</Link>
               <Link to="/contato" className="hover:text-white transition-colors text-sm">Contato</Link>

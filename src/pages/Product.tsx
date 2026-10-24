@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
-import { useParams, Navigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { useParams } from 'react-router-dom';
 import { categories } from '@/data/categories';
 import { products } from '@/data/products';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Truck, ShieldCheck, Thermometer } from 'lucide-react';
 import { CoverageMap } from '@/components/CoverageMap';
+import { Seo } from '@/components/seo/Seo';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
+import { faqSchema, productServiceSchema } from '@/utils/schema';
+import NotFound from '@/pages/NotFound';
 
 // Advanced SEO & Local GEO Data mapping per product. 
 // Fully editable list of curated texts that dynamically populates on need.
@@ -143,59 +147,33 @@ export default function Product() {
     setMainImage(defaultImage);
   }, [productSlug, defaultImage]);
 
-  if (!category || !product) {
-    return <Navigate to="/" replace />;
+  // Produto inexistente ou acessado pela categoria errada responde como 404 (sem conteúdo duplicado).
+  if (!category || !product || product.categoryId !== category.id) {
+    return <NotFound />;
   }
+
+  const productUrlPath = `/locacao/${category.slug}/${product.slug}`;
+  const schemaImages = Array.from(new Set([product.image, ...(product.gallery || [])].filter(Boolean)));
 
   const wppMessage = `Olá! Quero alugar ${product.name}. Pode me passar disponibilidade, valores e confirmar as áreas de entrega no RJ?`;
 
   return (
     <>
-      <Helmet>
-        <title>{seo.customH1 || `Aluguel de ${product.name} no RJ | Viploc`}</title>
-        <meta name="title" content={seo.customH1 || `Aluguel de ${product.name} no RJ | Viploc`} />
-        <meta name="description" content={`${product.shortDescription} Melhor custo-benefício para locação de ${category.name.toLowerCase()} no Rio de Janeiro. Faça sua cotação!`} />
-        <link rel="canonical" href={`https://viploc.com.br/locacao/${category.slug}/${product.slug}`} />
-        <meta property="og:title" content={seo.customH1 || `Aluguel de ${product.name} no RJ | Viploc`} />
-        <meta property="og:description" content={`${product.shortDescription} Melhor custo-benefício para locação de ${category.name.toLowerCase()} no Rio de Janeiro. Faça sua cotação!`} />
-        <meta property="og:image" content={product.image || "https://viploc.com.br/images/og-default.jpg"} />
-        
-        {/* Schema markup for Product */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": product.name,
-            "image": product.image || "https://viploc.com.br/images/og-default.jpg",
-            "description": product.shortDescription,
-            "brand": {
-              "@type": "Brand",
-              "name": product.specs['Marca'] || 'Viploc'
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": `https://viploc.com.br/locacao/${category.slug}/${product.slug}`,
-              "priceCurrency": "BRL",
-              "availability": "https://schema.org/InStock",
-              "seller": {
-                "@type": "Organization",
-                "name": "Viploc Locações"
-              }
-            }
-          }) }} />
-      </Helmet>
+      <Seo
+        title={`Aluguel de ${product.name} no RJ | Viploc`}
+        description={`${product.shortDescription} Aluguel com entrega e retirada no Rio de Janeiro. Orçamento rápido no WhatsApp.`}
+        path={productUrlPath}
+        image={product.image}
+      />
+      <JsonLd data={productServiceSchema(product, category, schemaImages)} />
+      {seo.faqs && seo.faqs.length > 0 && <JsonLd data={faqSchema(seo.faqs)} />}
 
-      {/* Breadcrumbs */}
-      <div className="bg-gray-50 border-b border-gray-100 py-3 text-sm">
-         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-gray-500">
-            <Link to="/" className="hover:text-[#E10600]">Home</Link>
-            <span className="mx-2">/</span>
-            <Link to="/locacao" className="hover:text-[#E10600]">Locação</Link>
-            <span className="mx-2">/</span>
-            <Link to={`/locacao/${category.slug}`} className="hover:text-[#E10600]">{category.name}</Link>
-            <span className="mx-2">/</span>
-            <span className="text-gray-900 font-medium">{product.name}</span>
-         </div>
-      </div>
+      <Breadcrumbs items={[
+        { name: 'Home', path: '/' },
+        { name: 'Locação', path: '/locacao' },
+        { name: category.name, path: `/locacao/${category.slug}` },
+        { name: product.name, path: productUrlPath },
+      ]} />
 
       <section className="py-12 md:py-20 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -206,7 +184,8 @@ export default function Product() {
                <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8 flex items-center justify-center h-[400px] md:h-[500px] relative overflow-hidden">
                   <img 
                      src={mainImage} 
-                     alt={product.name} 
+                     alt={`Aluguel de ${product.name} no Rio de Janeiro`} 
+                     fetchPriority="high" 
                      className="w-full h-full object-contain mix-blend-darken hover:scale-105 transition-transform duration-500"
                      width={1200}
                      height={900}
@@ -227,7 +206,7 @@ export default function Product() {
                         onClick={() => setMainImage(img)}
                         className={`relative w-20 h-20 md:w-24 md:h-24 rounded-xl border flex-shrink-0 bg-gray-50 overflow-hidden transition-all ${mainImage === img ? 'border-[#E10600] ring-2 ring-[#E10600]/20 scale-105' : 'border-gray-200 hover:border-gray-300'}`}
                       >
-                        <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-contain p-2 mix-blend-darken" />
+                        <img src={img} alt={`${product.name} - foto ${idx + 1}`} loading="lazy" className="w-full h-full object-contain p-2 mix-blend-darken" />
                       </button>
                     ))}
                   </div>
