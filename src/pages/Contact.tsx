@@ -53,7 +53,7 @@ export default function Contact() {
                         <MapPin className="w-8 h-8 text-gray-400 flex-shrink-0" />
                         <div>
                            <p className="text-gray-400 text-sm mb-1">Área de Atuação</p>
-                           <p className="font-semibold">Rio de Janeiro e Região Metropolitana</p>
+                           <p className="font-semibold">Toda a cidade do Rio de Janeiro</p>
                         </div>
                      </div>
                   </div>
@@ -74,7 +74,7 @@ export default function Contact() {
                      </div>
                      <div className="border-b border-gray-100 pb-6">
                         <h4 className="font-bold text-gray-900 mb-2">2. Tem pedido mínimo de dias?</h4>
-                        <p className="text-gray-600 text-sm">Trabalhamos com flexibilidade. Desde a diária para um evento até locações mensais para o seu comércio.</p>
+                        <p className="text-gray-600 text-sm">A partir de 1 diária para um evento, até locações mensais para o seu comércio.</p>
                      </div>
                      <div className="border-b border-gray-100 pb-6">
                         <h4 className="font-bold text-gray-900 mb-2">3. E se equipamento der problema?</h4>

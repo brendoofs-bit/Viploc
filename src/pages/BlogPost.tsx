@@ -2,11 +2,11 @@ import { useParams, Link } from 'react-router-dom';
 import { Seo } from '@/components/seo/Seo';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbSchema, BUSINESS_ID } from '@/utils/schema';
-import { DEFAULT_OG_IMAGE, LOGO_URL, SITE_NAME, SITE_URL } from '@/data/site';
+import { LOGO_URL, SITE_NAME, SITE_URL } from '@/data/site';
 import NotFound from '@/pages/NotFound';
-import { blogPosts } from '@/data/blogPosts';
+import { blogPosts, readingMinutes } from '@/data/blogPosts';
 import Markdown from 'react-markdown';
-import { markdownLinkComponents } from '@/components/content/RichText';
+import { articleComponents } from '@/components/content/RichText';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Calendar, ChevronRight } from 'lucide-react';
@@ -29,7 +29,7 @@ export default function BlogPost() {
     },
     "headline": post.title,
     "description": post.description,
-    "image": DEFAULT_OG_IMAGE,
+    "image": post.image.src,
     "author": {
       "@type": "Organization",
       "name": "Equipe Viploc"
@@ -54,6 +54,7 @@ export default function BlogPost() {
         title={`${post.title} | Blog Viploc`}
         description={post.description}
         path={`/blog/${post.slug}`}
+        image={post.image.src}
         type="article"
       />
       <JsonLd data={structuredData} />
@@ -83,6 +84,7 @@ export default function BlogPost() {
            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-gray-500 text-sm">
               <span className="flex items-center gap-2"><Calendar size={16} /> Publicado em {new Date(post.date).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}</span>
               {post.updated && <span>Atualizado em {new Date(post.updated).toLocaleDateString('pt-BR', { timeZone: 'UTC' })}</span>}
+              <span>{readingMinutes(post.content)} min de leitura</span>
               <span>Por Equipe Viploc</span>
            </div>
         </header>
@@ -92,8 +94,9 @@ export default function BlogPost() {
            {/* DIMENSION Hero blog post: 1600x900 */}
            <div className="aspect-[21/9] rounded-2xl overflow-hidden bg-gray-100 shadow-md">
               <img 
-                 src="https://images.unsplash.com/photo-1498837167922-c779afa0fc11?w=1600&auto=format&fit=crop" 
-                 alt={post.title}
+                 src={post.image.src}
+                 alt={post.image.alt}
+                 fetchPriority="high"
                  className="w-full h-full object-cover"
                  width={1600}
                  height={685}
@@ -102,8 +105,8 @@ export default function BlogPost() {
         </div>
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-           <div className="prose prose-lg prose-red max-w-none text-gray-700">
-              <Markdown components={markdownLinkComponents}>{post.content}</Markdown>
+           <div>
+              <Markdown components={articleComponents}>{post.content}</Markdown>
            </div>
 
            {/* Tags */}
