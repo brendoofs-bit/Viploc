@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { motion, useScroll, useSpring, useTransform } from 'motion/react';
@@ -8,6 +7,7 @@ import { categories } from '@/data/categories';
 import { products } from '@/data/products';
 import { CheckCircle, Truck, Wrench, MessageCircle, Star, MousePointerClick, MessageSquareText, Sparkles, Box, Quote } from 'lucide-react';
 import { CoverageMap } from '@/components/CoverageMap';
+import { Seo } from '@/components/seo/Seo';
 
 export default function Home() {
   const stepsContainerRef = useRef<HTMLElement>(null);
@@ -27,16 +27,11 @@ export default function Home() {
 
   return (
     <>
-      <Helmet>
-        <title>Viploc - Locação de Equipamentos e Refrigeração no RJ</title>
-        <meta name="title" content="Viploc - Locação de Equipamentos e Refrigeração no RJ" />
-        <meta name="description" content="O melhor custo-benefício em locação de Geladeiras, Freezers, Cervejeiras, Micro-ondas e TVs no Rio de Janeiro. Entrega rápida." />
-        <link rel="canonical" href="https://viploc.com.br/" />
-        {/* DIMENSION OG Image: 1200x630 */}
-        <meta property="og:title" content="Viploc - Locação de Equipamentos e Refrigeração no RJ" />
-        <meta property="og:description" content="O melhor custo-benefício em locação de Geladeiras, Freezers, Cervejeiras, Micro-ondas e TVs no Rio de Janeiro. Entrega rápida." />
-        <meta property="og:image" content="/images/og-default.jpg" />
-      </Helmet>
+      <Seo
+        title="Viploc | Aluguel de Geladeira, Freezer e Equipamentos no RJ"
+        description="Aluguel de geladeira, freezer, cervejeira, expositor de bebidas, frigobar, micro-ondas e TV no Rio de Janeiro. Entrega e retirada inclusas. Orçamento no WhatsApp."
+        path="/"
+      />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-8 pb-20 md:py-24 lg:py-32 flex items-start md:items-center min-h-[85vh] md:min-h-[90vh]">
@@ -162,17 +157,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
             {categories.map((cat) => {
-              const bgImages: Record<string, string> = {
-                'geladeiras': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-geladeiras-viploc_dso1sc.png',
-                'freezers': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-freezer-viploc_jqndgw.png',
-                'frigobar': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-frigobar-viploc_hohtrd.png',
-                'expositores-de-bebidas': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352153/categoria-expositor-bebidas-viploc_bbwl6y.png',
-                'cervejeiras': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-cervejeira-viploc_vgqnow.png',
-                'purificador-de-agua': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-purificador-agua-viploc_ambwtv.png',
-                'micro-ondas': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-microondas-viploc_pqjqrl.png',
-                'tv': 'https://res.cloudinary.com/dt8fp7f6t/image/upload/v1780352152/categoria-tv-viploc_e1xpok.png',
-              };
-              const bgImage = bgImages[cat.slug] || 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=600';
+              const bgImage = cat.image;
               
               return (
               <Link 
@@ -181,7 +166,7 @@ export default function Home() {
                 className="group relative flex flex-col justify-end p-5 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-300 w-full max-w-[345px] h-[150px]"
               >
                 <div className="absolute inset-0 bg-gray-200">
-                  <img src={bgImage} alt={cat.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                  <img src={bgImage} alt={`Aluguel de ${cat.keyword} no Rio de Janeiro`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 group-hover:from-[#E10600]/90 transition-colors duration-500"></div>
                 

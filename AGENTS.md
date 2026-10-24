@@ -35,3 +35,11 @@ Para qualquer modificação nas páginas (Home, Category, Product, etc.), manten
 - Imagens de Categoria/Produto: Empregue classes como `mix-blend-multiply` ou `mix-blend-darken` (quando aplicável) para as thumbnails sobre fundo cinza-claro (`bg-gray-100` ou `bg-gray-50`), adicionando o efeito `hover:scale-105 transition-transform duration-500` para melhor experiência.
 
 Seguindo esses padrões, garantimos que toda e qualquer nova página ou alteração mantenha alinhamento rigoroso com a identidade da marca e o layout proposto para o site da Viploc.
+
+## 6. SEO técnico (obrigatório em páginas novas)
+- O site é pré-renderizado no build (`scripts/prerender.mjs`): cada rota vira um HTML estático com title, meta e conteúdo.
+- **Toda rota nova precisa estar em `src/data/routes.ts`** (`getSiteRoutes`). Rota fora dessa lista não é gerada e responde 404 em produção. O `sitemap.xml` é gerado da mesma lista.
+- Metatags: use **um** `<Seo>` (`src/components/seo/Seo.tsx`) por página, com `title` em string única (nunca `<title>Texto {variavel}</title>`), `description` e `path` canônico. Páginas que não devem ser indexadas usam `noindex`.
+- Dados estruturados: use `<JsonLd>` com os builders de `src/utils/schema.ts` (Service, FAQPage, BreadcrumbList). Não use `Product`/`Offer` sem preço.
+- Slug inexistente deve renderizar `<NotFound />` (nunca `<Navigate>` para a home).
+- Código que usa `window`/`document` só pode rodar dentro de `useEffect` ou ser carregado via `lazy` após a montagem (ver `CoverageMap`).

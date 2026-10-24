@@ -1,5 +1,8 @@
-import { useParams, Navigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { useParams, Link } from 'react-router-dom';
+import { Seo } from '@/components/seo/Seo';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { breadcrumbSchema } from '@/utils/schema';
+import NotFound from '@/pages/NotFound';
 import { locations } from '@/data/locations';
 import { categories } from '@/data/categories';
 import { Button } from '@/components/ui/Button';
@@ -11,16 +14,21 @@ export default function LocalPage() {
   const location = locations.find(l => l.slug === locationSlug);
   
   if (!location) {
-    return <Navigate to="/rio-de-janeiro" replace />;
+    return <NotFound />;
   }
 
   return (
     <>
-      <Helmet>
-        <title>Aluguel de Freezers e Geladeiras na {location.name} | Viploc</title>
-        <meta name="description" content={`Entrega rápida para toda a ${location.name}. Locação de geladeiras, cervejeiras e freezers com o melhor custo-benefício. Peça cotação no WhatsApp.`} />
-        <link rel="canonical" href={`https://viploc.com.br/rio-de-janeiro/${location.slug}`} />
-      </Helmet>
+      <Seo
+        title={`Aluguel de Geladeira e Freezer ${location.preposition} ${location.shortName} do RJ | Viploc`}
+        description={`Aluguel de geladeira, freezer e cervejeira com entrega ${location.preposition} ${location.name}. Equipamentos higienizados e revisados. Peça sua cotação no WhatsApp.`}
+        path={`/rio-de-janeiro/${location.slug}`}
+      />
+      <JsonLd data={breadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Rio de Janeiro', path: '/rio-de-janeiro' },
+        { name: location.name, path: `/rio-de-janeiro/${location.slug}` },
+      ])} />
 
       {/* Hero Região */}
       <section className="bg-gray-50 py-16 text-center border-b border-gray-100">

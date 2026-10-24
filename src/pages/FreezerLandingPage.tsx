@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Seo } from '@/components/seo/Seo';
 import { Button } from '@/components/ui/Button';
 import { 
   MessageCircle, 
@@ -104,10 +104,12 @@ export default function FreezerLandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-[#E10600] selection:text-white">
-      <Helmet>
-        <title>Aluguel de Freezer no Rio de Janeiro | Viploc</title>
-        <meta name="description" content="Aluguel de freezers no mesmo dia no Rio de Janeiro. Sem burocracia, equipamentos revisados e entrega rápida. Solicite seu orçamento via WhatsApp!" />
-      </Helmet>
+      {/* Página de mídia paga: fora do índice para não competir com /locacao/freezers. */}
+      <Seo
+        title="Aluguel de Freezer no Rio de Janeiro | Viploc"
+        description="Aluguel de freezers no mesmo dia no Rio de Janeiro. Sem burocracia, equipamentos revisados e entrega rápida. Solicite seu orçamento via WhatsApp!"
+        noindex
+      />
 
       {/* 1. Header Fixo */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm h-[72px] flex items-center">

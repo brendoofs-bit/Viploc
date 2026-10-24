@@ -1,12 +1,9 @@
-import { Helmet } from 'react-helmet-async';
+import { Seo } from '@/components/seo/Seo';
 
 export default function Terms() {
   return (
     <>
-      <Helmet>
-        <title>Termos de Uso | Viploc</title>
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      <Seo title="Termos de Uso | Viploc" path="/termos-de-uso" noindex />
       <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-bold mb-8 text-gray-900">Termos de Uso</h1>
         <div className="prose prose-red text-gray-700">

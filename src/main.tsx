@@ -1,13 +1,24 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
+const container = document.getElementById('root')!;
+const app = (
   <StrictMode>
     <HelmetProvider>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </HelmetProvider>
   </StrictMode>
 );
+
+// Em produção o HTML já vem pré-renderizado (scripts/prerender.mjs) e é hidratado; no `vite dev` o root chega vazio.
+if (container.firstElementChild) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}

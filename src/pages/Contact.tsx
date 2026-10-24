@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Seo } from '@/components/seo/Seo';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { MapPin, MessageCircle, Clock } from 'lucide-react';
@@ -6,11 +6,11 @@ import { MapPin, MessageCircle, Clock } from 'lucide-react';
 export default function Contact() {
   return (
     <>
-      <Helmet>
-        <title>Contato | Fale com a Viploc | Locação no RJ</title>
-        <meta name="description" content="Precisa alugar equipamentos rápido? Chame no WhatsApp. Atendemos todo Rio de Janeiro sem burocracia e sem formulários." />
-        <link rel="canonical" href="https://viploc.com.br/contato" />
-      </Helmet>
+      <Seo
+        title="Contato | Fale com a Viploc | Locação no RJ"
+        description="Precisa alugar equipamentos rápido? Chame no WhatsApp. Atendemos todo Rio de Janeiro sem burocracia e sem formulários."
+        path="/contato"
+      />
 
       <section className="bg-gray-50 py-16 text-center border-b border-gray-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

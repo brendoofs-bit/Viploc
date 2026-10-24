@@ -1,9 +1,13 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { useParams, Link } from 'react-router-dom';
 import { categories } from '@/data/categories';
 import { products } from '@/data/products';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { Seo } from '@/components/seo/Seo';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
+import { categoryServiceSchema, faqSchema } from '@/utils/schema';
+import NotFound from '@/pages/NotFound';
 
 export default function Category() {
   const { categorySlug } = useParams<{ categorySlug: string }>();
@@ -11,28 +15,41 @@ export default function Category() {
   const category = categories.find(c => c.slug === categorySlug);
   
   if (!category) {
-    return <Navigate to="/" replace />;
+    return <NotFound />;
   }
 
   const categoryProducts = products.filter(p => p.categoryId === category.id);
+  const categoryName = category.name.toLowerCase();
+
+  const faqs = [
+    { question: `Como funciona a entrega de ${categoryName}?`, answer: 'Nós entregamos e retiramos no local que você precisar. A montagem/instalação básica também está inclusa no serviço e deixamos tudo funcionando.' },
+    { question: 'Qual o período mínimo de locação?', answer: 'Oferecemos flexibilidade total: você pode alugar por diárias para eventos rápidos, quinzenal ou contratos mensais.' },
+    { question: `Os equipamentos de ${categoryName} são higienizados?`, answer: 'Sim! Todos os nossos equipamentos passam por um rigoroso processo de higienização e manutenção preventiva antes de cada locação.' },
+    { question: 'E se apresentar algum defeito?', answer: 'Temos equipe técnica de prontidão. Em caso de problemas não resolvidos rapidamente no local, realizamos a substituição do equipamento sem custo extra.' },
+  ];
 
   return (
     <>
-      <Helmet>
-        <title>Aluguel de {category.name} no Rio de Janeiro | Viploc</title>
-        <meta name="title" content={`Aluguel de ${category.name} no Rio de Janeiro | Viploc`} />
-        <meta name="description" content={`A Viploc é especialista em locação de ${category.name.toLowerCase()} no RJ. Entrega expressa, equipamentos revisados e o melhor custo-benefício. Confira o catálogo.`} />
-        <link rel="canonical" href={`https://viploc.com.br/locacao/${category.slug}`} />
-        <meta property="og:title" content={`Aluguel de ${category.name} no Rio de Janeiro | Viploc`} />
-        <meta property="og:description" content={`A Viploc é especialista em locação de ${category.name.toLowerCase()} no RJ. Entrega expressa, equipamentos revisados e o melhor custo-benefício. Confira o catálogo.`} />
-      </Helmet>
+      <Seo
+        title={`Aluguel de ${category.singularName} no RJ | Locação com Entrega | Viploc`}
+        description={`Aluguel de ${category.keyword} no Rio de Janeiro com entrega e retirada. Locação por diária, semana ou mês, com equipamentos higienizados. Orçamento no WhatsApp.`}
+        path={`/locacao/${category.slug}`}
+        image={category.image}
+      />
+      <JsonLd data={categoryServiceSchema(category, categoryProducts)} />
+      <JsonLd data={faqSchema(faqs)} />
+      <Breadcrumbs items={[
+        { name: 'Home', path: '/' },
+        { name: 'Locação', path: '/locacao' },
+        { name: category.name, path: `/locacao/${category.slug}` },
+      ]} />
 
       {/* Hero Categorias */}
       <section className="bg-gray-50 py-16 text-center border-b border-gray-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Badge className="mb-4">Catálogo Completo</Badge>
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-6 drop-shadow-sm">
-            Locação de <span className="text-[#E10600]">{category.name}</span> no Rio de Janeiro
+          <span className="text-sm font-bold text-[#E10600] uppercase tracking-widest block mb-2">Locação de {categoryName}</span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+            Aluguel de <span className="text-[#E10600]">{category.singularName}</span> no Rio de Janeiro
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             {category.description} Equipamentos higienizados, testados e com suporte ágil para o seu evento ou ponto de venda.
@@ -51,7 +68,7 @@ export default function Category() {
                   <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden flex items-center justify-center">
                     <img 
                        src={prod.image || "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&auto=format&fit=crop"} 
-                       alt={prod.name} 
+                       alt={`Aluguel de ${prod.name}`} 
                        className={`object-contain w-full h-full mix-blend-multiply opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-500 ${!prod.image && "grayscale"}`} 
                        loading="lazy" 
                        width={800} 
@@ -93,15 +110,10 @@ export default function Category() {
           <div>
             <h2 className="text-3xl font-extrabold text-gray-900 mb-8">Dúvidas sobre {category.name}</h2>
             <div className="space-y-6">
-              {[
-                { q: `Como funciona a entrega de ${category.name.toLowerCase()}?`, a: 'Nós entregamos e retiramos no local que você precisar. A montagem/instalação básica também está inclusa no serviço e deixamos tudo funcionando.' },
-                { q: 'Qual o período mínimo de locação?', a: 'Oferecemos flexibilidade total: você pode alugar por diárias para eventos rápidos, quinzenal ou contratos mensais.' },
-                { q: `Os equipamentos de ${category.name.toLowerCase()} são higienizados?`, a: 'Sim! Todos os nossos equipamentos passam por um rigoroso processo de higienização e manutenção preventiva antes de cada locação.' },
-                { q: 'E se apresentar algum defeito?', a: 'Temos equipe técnica de prontidão. Em caso de problemas não resolvidos rapidamente no local, realizamos a substituição do equipamento sem custo extra.' }
-              ].map((faq, index) => (
+              {faqs.map((faq, index) => (
                 <div key={index} className="bg-gray-50 rounded-2xl p-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">{faq.q}</h4>
-                  <p className="text-gray-600">{faq.a}</p>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">{faq.question}</h4>
+                  <p className="text-gray-600">{faq.answer}</p>
                 </div>
               ))}
             </div>

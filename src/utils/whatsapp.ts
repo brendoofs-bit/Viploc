@@ -1,7 +1,8 @@
+import { WHATSAPP_NUMBER } from '@/data/site';
+
 export const generateWhatsAppLink = (message: string) => {
-  const phoneNumber = '5521991605699';
   const encodedMessage = encodeURIComponent(message);
-  return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 };
 
 export const defaultWhatsAppMessage = "Olá! Gostaria de fazer um orçamento com o melhor custo-benefício e saber mais sobre as condições de locação.";

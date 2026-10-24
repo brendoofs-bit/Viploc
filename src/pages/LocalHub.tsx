@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Seo } from '@/components/seo/Seo';
 import { locations } from '@/data/locations';
 import { categories } from '@/data/categories';
 import { MapPin } from 'lucide-react';
@@ -7,11 +7,11 @@ import { MapPin } from 'lucide-react';
 export default function LocalHub() {
   return (
     <>
-      <Helmet>
-        <title>Áreas de Cobertura no Rio de Janeiro | Viploc Locações</title>
-        <meta name="description" content="Atendemos diversas regiões metropolitanas do Rio de Janeiro com entrega expressa de equipamentos de refrigeração. Fale conosco!" />
-        <link rel="canonical" href="https://viploc.com.br/rio-de-janeiro" />
-      </Helmet>
+      <Seo
+        title="Aluguel de Equipamentos em Todo o Rio de Janeiro | Viploc"
+        description="Entrega e retirada de geladeiras, freezers, cervejeiras e outros equipamentos em toda a cidade do Rio de Janeiro: Zona Sul, Zona Norte, Zona Oeste e Centro."
+        path="/rio-de-janeiro"
+      />
 
       <section className="bg-gray-50 py-16 text-center border-b border-gray-100">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
