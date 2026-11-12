@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Viploc - Locação de Equipamentos e Refrigeração no RJ",
+  "description": "O melhor custo-benefício em locação de Geladeiras, Freezers, Cervejeiras, Micro-ondas e TVs no Rio de Janeiro. Entrega rápida.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
