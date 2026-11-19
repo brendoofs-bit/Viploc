@@ -186,16 +186,16 @@ export default function FreezerLandingPage() {
                 />
               </div>
               
-              {/* Floating price card */}
-              <div className="relative sm:absolute sm:bottom-6 sm:left-6 sm:right-auto bg-white rounded-2xl p-4 shadow-xl flex items-center justify-between sm:justify-start gap-6 border border-gray-100 sm:border-0 z-10 -mt-8 mx-4 sm:-mt-0 sm:mx-0">
+              {/* Floating quote card */}
+              <div className="relative sm:absolute sm:bottom-6 sm:left-6 sm:right-auto bg-white rounded-2xl p-4 shadow-xl flex items-center justify-between sm:justify-start gap-5 border border-gray-100 sm:border-0 z-10 -mt-8 mx-4 sm:-mt-0 sm:mx-0">
                 <div>
-                  <p className="text-[10px] font-bold text-[#E10600] uppercase tracking-wider mb-0.5">A PARTIR DE</p>
-                    <p className="text-3xl font-black text-gray-900 leading-none">R$ 80<span className="text-sm font-medium text-gray-500">/diária</span></p>
-                  </div>
-                  <a href={mainWaLink} target="_blank" rel="noopener noreferrer" className="bg-[#E10600] text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-red-700 transition-colors">
-                    Ver preços &rarr;
-                  </a>
+                  <p className="text-[10px] font-bold text-[#E10600] uppercase tracking-wider mb-0.5">ORÇAMENTO NA HORA</p>
+                  <p className="text-base sm:text-lg font-black text-gray-900 leading-tight">Entrega, instalação e retirada</p>
                 </div>
+                <a href={mainWaLink} target="_blank" rel="noopener noreferrer" className="bg-[#E10600] text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-red-700 transition-colors whitespace-nowrap shrink-0">
+                  Pedir orçamento &rarr;
+                </a>
+              </div>
             </div>
           </div>
         </div>
